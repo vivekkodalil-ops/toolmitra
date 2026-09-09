@@ -2,323 +2,3533 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ToolMitra – Free Calculators & Useful Tools for India</title>
-<meta name="description" content="ToolMitra offers free, simple calculators and practical tools for everyday life in India: EMI, SIP, GST, income tax, salary, PPF, EPF, gratuity, HRA, NPS, EV, fuel, conversions and more.">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>ToolMitra - 55 Free Tools & Calculators for India</title>
+
+<meta name="description"
+content="ToolMitra provides 55 free online calculators and useful tools for India including EMI, SIP, GST, tax, health, vehicle, business and everyday calculators.">
+
+<meta name="keywords"
+content="ToolMitra, calculators India, EMI calculator, SIP calculator, GST calculator, loan calculator, tax calculator, fuel calculator, BMI calculator">
+
 <meta name="theme-color" content="#07111f">
+
+<meta property="og:title" content="ToolMitra - Free Tools for Everyday India">
+<meta property="og:description" content="55 free calculators and useful tools for everyday decisions in India.">
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/png" href="logo.png">
+
 <style>
-:root{--navy:#07111f;--blue:#2563eb;--cyan:#06b6d4;--text:#101828;--muted:#667085;--light:#f5f8fc;--white:#fff;--border:#e4e9f1;--shadow:0 12px 35px rgba(15,23,42,.08);--shadow2:0 18px 45px rgba(15,23,42,.13)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--light);color:var(--text);line-height:1.5}button,input,select{font:inherit}
-header{background:radial-gradient(circle at 85% 10%,rgba(59,130,246,.2),transparent 30%),linear-gradient(135deg,#07111f,#0b1a30 60%,#0d2441);color:#fff}
-.header-inner,main,.footer-inner{max-width:1180px;margin:auto}.header-inner{padding:18px 20px;display:flex;align-items:center;gap:14px}.brand-logo{width:58px;height:58px;object-fit:contain;border-radius:15px;background:#fff;padding:4px}.logo{font-size:29px;font-weight:850;letter-spacing:-1px}.tagline{font-size:13px;color:#b8c2d1}
-main{padding:0 20px 65px}.hero{margin-top:30px;padding:42px 34px;border-radius:28px;background:radial-gradient(circle at 90% 20%,rgba(59,130,246,.14),transparent 28%),#fff;border:1px solid var(--border);box-shadow:var(--shadow)}
-.badge{display:inline-flex;padding:7px 12px;border-radius:999px;background:#eff6ff;color:#1d4ed8;font-size:13px;font-weight:750}.hero h1{margin:16px 0 0;font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-2px}.hero h1 span{background:linear-gradient(90deg,#2563eb,#0891b2);-webkit-background-clip:text;color:transparent}.hero p{max-width:780px;color:var(--muted);font-size:18px;line-height:1.7}
-.stats{display:flex;flex-wrap:wrap;gap:9px}.stat{padding:8px 12px;border:1px solid var(--border);background:#fbfcfe;border-radius:11px;font-size:12px;font-weight:650;color:#475467}
-.search-section{margin-top:22px;position:relative}.search{width:100%;padding:17px 48px;border:1px solid #d8dee8;border-radius:16px;font-size:16px;outline:none;background:#fff}.search:focus{border-color:#7aa7f8;box-shadow:0 0 0 4px rgba(37,99,235,.09)}.search-icon{position:absolute;left:18px;top:17px;color:#98a2b3}.clear{display:none;position:absolute;right:12px;top:11px;border:0;background:#eef2f7;border-radius:50%;width:32px;height:32px;cursor:pointer}
-.section-heading{margin:38px 0 16px}.section-heading h2{margin:0;font-size:25px}.section-heading p{margin:4px 0;color:var(--muted);font-size:14px}.categories{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.category-btn{border:1px solid #dce2eb;background:#fff;color:#475467;padding:8px 13px;border-radius:999px;font-size:12px;font-weight:700;cursor:pointer}.category-btn.active{background:#0b1b30;color:#fff}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{background:#fff;padding:21px;border-radius:19px;border:1px solid var(--border);cursor:pointer;transition:.22s;min-height:205px}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow2)}.card-icon{width:46px;height:46px;display:flex;align-items:center;justify-content:center;border-radius:13px;background:#f0f6ff;font-size:22px;margin-bottom:16px}.card h3{margin:0 0 7px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px}.card-bottom{display:flex;justify-content:space-between;margin-top:16px;padding-top:12px;border-top:1px solid #eef1f5}.category-label{font-size:10px;font-weight:750;text-transform:uppercase;color:#667085}.arrow{color:#2563eb}
-.no-results{display:none;padding:40px;text-align:center;background:#fff;border:1px solid var(--border);border-radius:20px;color:var(--muted)}
-.tool{display:none;margin:30px auto 0;background:#fff;padding:30px;border-radius:24px;border:1px solid var(--border);box-shadow:var(--shadow);max-width:800px}.tool.active{display:block}.back{border:0;background:#f4f7fb;color:#475467;padding:9px 13px;border-radius:10px;font-weight:700;cursor:pointer;margin-bottom:22px}.tool-header h2{margin:0;font-size:29px;letter-spacing:-1px}.tool-header p{color:var(--muted);margin:6px 0 23px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.full{grid-column:1/-1}label{display:block;margin:14px 0 7px;font-weight:700;font-size:13px;color:#344054}input,select{width:100%;padding:13px;border:1px solid #ccd4df;border-radius:11px;font-size:16px;outline:none;background:#fff}input:focus,select:focus{border-color:#75a4f5;box-shadow:0 0 0 4px rgba(37,99,235,.08)}button.calculate{width:100%;margin-top:20px;padding:14px;border:0;border-radius:11px;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-weight:750;cursor:pointer}.reset{width:100%;margin-top:9px;padding:12px;border:1px solid #d8dee8;border-radius:11px;background:#fff;color:#475467;font-weight:650;cursor:pointer}.result{margin-top:18px;padding:18px;background:linear-gradient(135deg,#f0f6ff,#f7fbff);border:1px solid #dce9fb;border-radius:15px;font-weight:700;line-height:1.8}.big{font-size:24px;color:#155eef}.small{color:#667085;font-size:12px;line-height:1.6}.note{padding:12px;background:#fff8e7;border:1px solid #f4dfaa;border-radius:10px;color:#725b19;font-size:12px;margin-top:14px}
-.trust{margin-top:45px;padding:28px;border-radius:22px;background:#0b1729;color:#fff}.trust h2{margin:0}.trust p{color:#aeb9c9}.trust-items{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.trust-item{padding:16px;border:1px solid rgba(255,255,255,.1);border-radius:14px}.trust-item span{display:block;color:#9ba8bb;font-size:11px;margin-top:4px}
-footer{background:#07111f;color:#fff;padding:36px 20px}.footer-top{display:flex;justify-content:space-between;gap:30px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.09)}.footer-brand{max-width:450px}.footer-brand p{color:#9ba8bb;font-size:13px}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a{color:#aeb9c9;text-decoration:none;font-size:12px}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.trust-items{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}}
-@media(max-width:600px){.header-inner{padding:16px}.brand-logo{width:53px;height:53px}.logo{font-size:25px}main{padding:0 14px 50px}.hero{margin-top:18px;padding:29px 21px;border-radius:22px}.hero h1{font-size:34px}.hero p{font-size:15px}.grid{grid-template-columns:1fr}.card{min-height:0}.tool{padding:21px 17px;border-radius:20px}.tool-header h2{font-size:25px}.footer-top{flex-direction:column}}
+
+/* =========================================================
+   TOOLMITRA
+   55 FREE TOOLS
+   ========================================================= */
+
+:root{
+  --navy:#07111f;
+  --navy2:#0c1b30;
+  --blue:#2563eb;
+  --blue2:#3b82f6;
+  --cyan:#06b6d4;
+  --text:#101828;
+  --muted:#667085;
+  --light:#f5f8fc;
+  --white:#fff;
+  --border:#e4e9f1;
+  --shadow:0 10px 30px rgba(15,23,42,.07);
+  --shadow2:0 18px 45px rgba(15,23,42,.13);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  background:var(--light);
+  color:var(--text);
+  line-height:1.5;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header{
+  background:
+    radial-gradient(circle at 85% 10%,rgba(59,130,246,.20),transparent 30%),
+    radial-gradient(circle at 10% 90%,rgba(6,182,212,.10),transparent 25%),
+    linear-gradient(135deg,#07111f,#0b1a30 60%,#0d2441);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+
+.header-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.brand-logo{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  border-radius:15px;
+  background:#fff;
+  padding:5px;
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+.logo{
+  font-size:29px;
+  font-weight:850;
+  letter-spacing:-1px;
+  line-height:1;
+}
+
+.tagline{
+  margin-top:6px;
+  font-size:13px;
+  color:rgba(255,255,255,.68);
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main{
+  max-width:1180px;
+  margin:auto;
+  padding:0 20px 70px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+  margin-top:30px;
+  padding:45px 35px;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 90% 20%,rgba(59,130,246,.14),transparent 28%),
+    radial-gradient(circle at 10% 100%,rgba(6,182,212,.08),transparent 30%),
+    #fff;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.hero-badge{
+  display:inline-flex;
+  padding:7px 12px;
+  border-radius:999px;
+  background:#eff6ff;
+  color:#1d4ed8;
+  border:1px solid #dbeafe;
+  font-size:13px;
+  font-weight:750;
+  margin-bottom:16px;
+}
+
+.hero h1{
+  margin:0;
+  font-size:clamp(36px,5vw,54px);
+  line-height:1.06;
+  letter-spacing:-2.3px;
+}
+
+.hero h1 span{
+  background:linear-gradient(90deg,#2563eb,#0891b2);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero-description{
+  max-width:730px;
+  margin:18px 0 0;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.7;
+}
+
+.hero-stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:24px;
+}
+
+.stat{
+  padding:9px 13px;
+  border:1px solid var(--border);
+  border-radius:11px;
+  background:#fbfcfe;
+  color:#475467;
+  font-size:13px;
+  font-weight:650;
+}
+
+.stat strong{
+  color:#172033;
+}
+
+/* =========================================================
+   CATEGORY NAV
+   ========================================================= */
+
+.category-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:28px 0 10px;
+}
+
+.category-nav a{
+  text-decoration:none;
+  color:#344054;
+  background:#fff;
+  border:1px solid #dce2eb;
+  padding:9px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  transition:.2s;
+}
+
+.category-nav a:hover{
+  background:#eff6ff;
+  color:#2563eb;
+  border-color:#bfdbfe;
+}
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.category-section{
+  margin-top:42px;
+  scroll-margin-top:20px;
+}
+
+.category-heading{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:17px;
+}
+
+.category-heading h2{
+  margin:0;
+  font-size:27px;
+  letter-spacing:-.8px;
+}
+
+.category-heading p{
+  margin:4px 0 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.category-count{
+  background:#eff6ff;
+  color:#2563eb;
+  border:1px solid #dbeafe;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:750;
+  white-space:nowrap;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+
+.card{
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+  padding:21px;
+  border-radius:19px;
+  border:1px solid var(--border);
+  cursor:pointer;
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow2);
+  border-color:#cfd9e7;
+}
+
+.card:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,#2563eb,#06b6d4);
+  opacity:0;
+  transition:.2s;
+}
+
+.card:hover:before{
+  opacity:1;
+}
+
+/* ICON */
+
+.card-icon{
+  width:50px;
+  height:50px;
+  border-radius:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#eff6ff,#f0fdfa);
+  border:1px solid #dbeafe;
+  font-size:25px;
+  margin-bottom:16px;
+}
+
+.card h3{
+  margin:0 0 7px;
+  font-size:17px;
+  letter-spacing:-.2px;
+}
+
+.card p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+  min-height:42px;
+}
+
+.card-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:17px;
+  padding-top:13px;
+  border-top:1px solid #eef1f5;
+}
+
+.category-label{
+  font-size:10px;
+  font-weight:800;
+  color:#667085;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+}
+
+.arrow{
+  width:29px;
+  height:29px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f5f8fc;
+  color:#2563eb;
+  transition:.2s;
+}
+
+.card:hover .arrow{
+  background:#2563eb;
+  color:#fff;
+}
+
+/* =========================================================
+   TOOL VIEW
+   ========================================================= */
+
+.tool{
+  display:none;
+  margin-top:30px;
+  background:#fff;
+  padding:30px;
+  border-radius:24px;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.tool.active{
+  display:block;
+}
+
+.back{
+  border:0;
+  background:#f4f7fb;
+  color:#475467;
+  padding:9px 13px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+  margin-bottom:22px;
+}
+
+.back:hover{
+  background:#eaf0f8;
+}
+
+.tool-header{
+  margin-bottom:24px;
+}
+
+.tool-header h2{
+  margin:0;
+  font-size:30px;
+  letter-spacing:-1px;
+}
+
+.tool-header p{
+  margin:6px 0 0;
+  color:var(--muted);
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0 18px;
+}
+
+label{
+  display:block;
+  margin:15px 0 7px;
+  color:#344054;
+  font-weight:700;
+  font-size:14px;
+}
+
+input,
+select{
+  width:100%;
+  padding:14px;
+  border:1px solid #ccd4df;
+  border-radius:11px;
+  background:#fff;
+  color:#101828;
+  font-size:16px;
+  outline:none;
+}
+
+input:focus,
+select:focus{
+  border-color:#75a4f5;
+  box-shadow:0 0 0 4px rgba(37,99,235,.08);
+}
+
+.calculate{
+  width:100%;
+  margin-top:22px;
+  padding:15px;
+  border:0;
+  border-radius:11px;
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:#fff;
+  font-size:16px;
+  font-weight:750;
+  cursor:pointer;
+}
+
+.calculate:hover{
+  transform:translateY(-1px);
+}
+
+.reset{
+  width:100%;
+  margin-top:10px;
+  padding:13px;
+  border:1px solid #d8dee8;
+  border-radius:11px;
+  background:#fff;
+  color:#475467;
+  font-weight:650;
+  cursor:pointer;
+}
+
+.result{
+  margin-top:20px;
+  padding:20px;
+  background:linear-gradient(135deg,#f0f6ff,#f7fbff);
+  border:1px solid #dce9fb;
+  border-radius:15px;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.9;
+  color:#14213a;
+}
+
+.small{
+  color:#667085;
+  font-size:12px;
+  line-height:1.6;
+}
+
+/* =========================================================
+   TRUST
+   ========================================================= */
+
+.trust{
+  margin-top:48px;
+  padding:30px;
+  border-radius:23px;
+  background:#0b1729;
+  color:#fff;
+}
+
+.trust h2{
+  margin:0;
+  font-size:25px;
+}
+
+.trust p{
+  max-width:760px;
+  color:rgba(255,255,255,.63);
+  line-height:1.7;
+}
+
+.trust-items{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:22px;
+}
+
+.trust-item{
+  padding:17px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:14px;
+  background:rgba(255,255,255,.035);
+}
+
+.trust-item strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+.trust-item span{
+  color:rgba(255,255,255,.55);
+  font-size:12px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+  background:#07111f;
+  color:#fff;
+  padding:38px 20px;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  padding-bottom:25px;
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+
+.footer-brand{
+  max-width:450px;
+}
+
+.footer-brand h3{
+  margin:0;
+  font-size:21px;
+}
+
+.footer-brand p{
+  color:rgba(255,255,255,.55);
+  font-size:13px;
+  line-height:1.6;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  color:rgba(255,255,255,.65);
+  text-decoration:none;
+  font-size:13px;
+}
+
+.footer-bottom{
+  padding-top:20px;
+  text-align:center;
+  color:rgba(255,255,255,.4);
+  font-size:12px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:950px){
+
+  .grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .trust-items{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  main{
+    padding:0 14px 50px;
+  }
+
+  .header-inner{
+    padding:17px 15px;
+  }
+
+  .brand-logo{
+    width:52px;
+    height:52px;
+  }
+
+  .logo{
+    font-size:25px;
+  }
+
+  .tagline{
+    font-size:11px;
+  }
+
+  .hero{
+    margin-top:20px;
+    padding:29px 21px;
+    border-radius:22px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero-description{
+    font-size:16px;
+  }
+
+  .category-nav{
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding-bottom:5px;
+  }
+
+  .category-nav a{
+    flex-shrink:0;
+  }
+
+  .category-section{
+    margin-top:32px;
+  }
+
+  .category-heading h2{
+    font-size:23px;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+
+  .card{
+    padding:15px;
+    border-radius:16px;
+  }
+
+  .card-icon{
+    width:43px;
+    height:43px;
+    font-size:21px;
+    border-radius:12px;
+    margin-bottom:12px;
+  }
+
+  .card h3{
+    font-size:14px;
+  }
+
+  .card p{
+    font-size:11px;
+    min-height:auto;
+  }
+
+  .card-bottom{
+    margin-top:12px;
+    padding-top:10px;
+  }
+
+  .category-label{
+    font-size:8px;
+  }
+
+  .arrow{
+    width:25px;
+    height:25px;
+    font-size:13px;
+  }
+
+  .tool{
+    padding:21px 17px;
+    border-radius:20px;
+  }
+
+  .tool-header h2{
+    font-size:25px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust{
+    padding:24px 19px;
+  }
+
+  .footer-top{
+    flex-direction:column;
+  }
+
+}
+
+/* very small phones */
+
+@media(max-width:380px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
 </style>
 </head>
+
 <body>
-<header><div class="header-inner">
-<img src="logo.png" class="brand-logo" alt="ToolMitra logo" onerror="this.style.display='none'">
-<div><div class="logo">ToolMitra</div><div class="tagline">Free useful calculators and tools for India</div></div>
-</div></header>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header>
+
+  <div class="header-inner">
+
+    <img
+      src="logo.png"
+      alt="ToolMitra logo"
+      class="brand-logo">
+
+    <div>
+      <div class="logo">ToolMitra</div>
+      <div class="tagline">
+        Free useful tools for everyday India
+      </div>
+    </div>
+
+  </div>
+
+</header>
+
 
 <main>
-<section id="home">
-<div class="hero">
-<div class="badge">✦ Free • Fast • Simple</div>
-<h1>Smart tools for <span>everyday India.</span></h1>
-<p>Calculate, compare, convert and plan with practical tools for finance, tax, health, vehicles and everyday decisions.</p>
-<div class="stats"><div class="stat"><strong id="toolCount">55</strong> Free Tools</div><div class="stat">⚡ Instant Results</div><div class="stat">🇮🇳 Made for India</div><div class="stat">🔒 No Sign-up</div></div>
-</div>
-<div class="search-section">
-<span class="search-icon">⌕</span><input id="search" class="search" type="search" placeholder="Search tools, e.g. home loan, PPF, EV, GST, fuel..."><button class="clear" id="clear">×</button>
-</div>
-<div class="section-heading"><h2>Explore our tools</h2><p>Useful calculators for real-life calculations and everyday decisions.</p></div>
-<div class="categories" id="categories"></div>
-<div class="grid" id="toolGrid"></div>
-<div class="no-results" id="noResults"><strong>No tools found</strong><br>Try EMI, tax, SIP, fuel, EV, PPF, salary or converter.</div>
-<section class="trust"><h2>Simple tools. Clear results.</h2><p>ToolMitra is designed to make everyday calculations quick, understandable and mobile-friendly.</p><div class="trust-items"><div class="trust-item"><strong>⚡ Instant</strong><span>Calculations happen in your browser.</span></div><div class="trust-item"><strong>📱 Mobile first</strong><span>Built for phones and computers.</span></div><div class="trust-item"><strong>🆓 No sign-up</strong><span>Use the tools without creating an account.</span></div></div></section>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero">
+
+  <div class="hero-badge">
+    ✦ Free • Fast • Simple
+  </div>
+
+  <h1>
+    Smart tools for
+    <span>everyday India.</span>
+  </h1>
+
+  <p class="hero-description">
+    Calculate, compare, convert and plan with 55 practical
+    online tools for money, tax, health, vehicles,
+    business and everyday decisions.
+  </p>
+
+  <div class="hero-stats">
+
+    <div class="stat">
+      <strong>55</strong> Free Tools
+    </div>
+
+    <div class="stat">
+      ⚡ Instant Results
+    </div>
+
+    <div class="stat">
+      🇮🇳 Made for India
+    </div>
+
+    <div class="stat">
+      🔒 No Sign-up
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- =========================================================
+     CATEGORY NAVIGATION
+     ========================================================= -->
+
+<nav class="category-nav">
+
+  <a href="#finance">💰 Finance</a>
+  <a href="#tax">🧾 Tax</a>
+  <a href="#health">❤️ Health</a>
+  <a href="#vehicle">🚗 Vehicle</a>
+  <a href="#everyday">🧮 Everyday</a>
+  <a href="#business">💼 Business</a>
+
+</nav>
+
+
+<!-- =========================================================
+     TOOL HOME
+     ========================================================= -->
+
+<div id="home">
+
+
+<!-- =========================================================
+     FINANCE - 15
+     ========================================================= -->
+
+<section class="category-section" id="finance">
+
+  <div class="category-heading">
+    <div>
+      <h2>💰 Finance & Money</h2>
+      <p>Loans, investments, savings and financial planning.</p>
+    </div>
+    <span class="category-count">15 Tools</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openTool('emi')">
+      <div class="card-icon">💳</div>
+      <h3>EMI Calculator</h3>
+      <p>Calculate monthly EMI, total interest and payment.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('sip')">
+      <div class="card-icon">📈</div>
+      <h3>SIP Calculator</h3>
+      <p>Estimate future value of monthly SIP investments.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('lumpsum')">
+      <div class="card-icon">💵</div>
+      <h3>Lumpsum Calculator</h3>
+      <p>Estimate growth of a one-time investment.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('fd')">
+      <div class="card-icon">🏦</div>
+      <h3>FD Calculator</h3>
+      <p>Calculate estimated fixed deposit maturity value.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('rd')">
+      <div class="card-icon">🪙</div>
+      <h3>RD Calculator</h3>
+      <p>Estimate recurring deposit maturity amount.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('ppf')">
+      <div class="card-icon">🛡️</div>
+      <h3>PPF Calculator</h3>
+      <p>Estimate PPF growth from yearly contributions.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('nps')">
+      <div class="card-icon">👴</div>
+      <h3>NPS Calculator</h3>
+      <p>Estimate NPS corpus and possible annuity amount.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('simple-interest')">
+      <div class="card-icon">➕</div>
+      <h3>Simple Interest</h3>
+      <p>Calculate simple interest and maturity amount.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('compound-interest')">
+      <div class="card-icon">📊</div>
+      <h3>Compound Interest</h3>
+      <p>Calculate compound growth and final amount.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('cagr')">
+      <div class="card-icon">📈</div>
+      <h3>CAGR Calculator</h3>
+      <p>Calculate annualized investment growth rate.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('inflation')">
+      <div class="card-icon">📉</div>
+      <h3>Inflation Calculator</h3>
+      <p>Estimate future value after inflation.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('retirement')">
+      <div class="card-icon">🌴</div>
+      <h3>Retirement Calculator</h3>
+      <p>Estimate retirement corpus from savings and returns.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('savings-goal')">
+      <div class="card-icon">🎯</div>
+      <h3>Savings Goal</h3>
+      <p>Find the monthly investment needed for a target.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('loan-eligibility')">
+      <div class="card-icon">🏠</div>
+      <h3>Loan Eligibility</h3>
+      <p>Estimate possible loan amount from income.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('loan-comparison')">
+      <div class="card-icon">⚖️</div>
+      <h3>Loan Comparison</h3>
+      <p>Compare EMI and interest for two loan rates.</p>
+      <div class="card-bottom"><span class="category-label">Finance</span><span class="arrow">→</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     TAX - 6
+     ========================================================= -->
+
+<section class="category-section" id="tax">
+
+  <div class="category-heading">
+    <div>
+      <h2>🧾 Tax & GST</h2>
+      <p>Quick tax, GST and deduction calculations.</p>
+    </div>
+    <span class="category-count">6 Tools</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openTool('gst')">
+      <div class="card-icon">🧾</div>
+      <h3>GST Calculator</h3>
+      <p>Add GST to an amount and calculate total.</p>
+      <div class="card-bottom"><span class="category-label">Tax</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('gst-reverse')">
+      <div class="card-icon">↩️</div>
+      <h3>GST Reverse Calculator</h3>
+      <p>Remove GST from an inclusive amount.</p>
+      <div class="card-bottom"><span class="category-label">Tax</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('tax-amount')">
+      <div class="card-icon">💸</div>
+      <h3>Tax Amount Calculator</h3>
+      <p>Calculate tax amount using your entered tax rate.</p>
+      <div class="card-bottom"><span class="category-label">Tax</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('tds')">
+      <div class="card-icon">📄</div>
+      <h3>TDS Calculator</h3>
+      <p>Estimate TDS amount from payment and rate.</p>
+      <div class="card-bottom"><span class="category-label">Tax</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('gst-split')">
+      <div class="card-icon">✂️</div>
+      <h3>CGST / SGST Split</h3>
+      <p>Calculate CGST and SGST from GST rate.</p>
+      <div class="card-bottom"><span class="category-label">Tax</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('salary-after-tax')">
+      <div class="card-icon">💼</div>
+      <h3>Salary After Tax</h3>
+      <p>Estimate take-home salary using your entered rate.</p>
+      <div class="card-bottom"><span class="category-label">Tax</span><span class="arrow">→</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     HEALTH - 8
+     ========================================================= -->
+
+<section class="category-section" id="health">
+
+  <div class="category-heading">
+    <div>
+      <h2>❤️ Health & Fitness</h2>
+      <p>General wellness and fitness calculators.</p>
+    </div>
+    <span class="category-count">8 Tools</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openTool('bmi')">
+      <div class="card-icon">⚖️</div>
+      <h3>BMI Calculator</h3>
+      <p>Calculate BMI from height and weight.</p>
+      <div class="card-bottom"><span class="category-label">Health</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('bmr')">
+      <div class="card-icon">🔥</div>
+      <h3>BMR Calculator</h3>
+      <p>Estimate basal metabolic rate.</p>
+      <div class="card-bottom"><span class="category-label">Health</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('calories')">
+      <div class="card-icon">🍎</div>
+      <h3>Calorie Calculator</h3>
+      <p>Estimate daily calorie needs using activity level.</p>
+      <div class="card-bottom"><span class="category-label">Health</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('ideal-weight')">
+      <div class="card-icon">📏</div>
+      <h3>Ideal Weight</h3>
+      <p>Estimate ideal weight using height.</p>
+      <div class="card-bottom"><span class="category-label">Health</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('water')">
+      <div class="card-icon">💧</div>
+      <h3>Water Intake</h3>
+      <p>Estimate daily water requirement by body weight.</p>
+      <div class="card-bottom"><span class="category-label">Health</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('body-fat')">
+      <div class="card-icon">📐</div>
+      <h3>Body Fat Estimate</h3>
+      <p>Estimate body fat using basic measurements.</p>
+      <div class="card-bottom"><span class="category-label">Health</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('pregnancy')">
+      <div class="card-icon">🗓️</div>
+      <h3>Due Date Calculator</h3>
+      <p>Estimate pregnancy due date from last menstrual period.</p>
+      <div class="card-bottom"><span class="category-label">Health</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('macros')">
+      <div class="card-icon">🥗</div>
+      <h3>Macro Calculator</h3>
+      <p>Estimate protein, carbs and fat targets.</p>
+      <div class="card-bottom"><span class="category-label">Health</span><span class="arrow">→</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     VEHICLE - 7
+     ========================================================= -->
+
+<section class="category-section" id="vehicle">
+
+  <div class="category-heading">
+    <div>
+      <h2>🚗 Vehicle & Travel</h2>
+      <p>Fuel, mileage, EV and vehicle cost calculators.</p>
+    </div>
+    <span class="category-count">7 Tools</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openTool('fuel-cost')">
+      <div class="card-icon">⛽</div>
+      <h3>Fuel Cost</h3>
+      <p>Calculate estimated fuel cost for a trip.</p>
+      <div class="card-bottom"><span class="category-label">Vehicle</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('fuel-needed')">
+      <div class="card-icon">🛢️</div>
+      <h3>Fuel Needed</h3>
+      <p>Calculate litres of fuel required for distance.</p>
+      <div class="card-bottom"><span class="category-label">Vehicle</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('mileage')">
+      <div class="card-icon">🚘</div>
+      <h3>Mileage Calculator</h3>
+      <p>Calculate vehicle mileage from fuel and distance.</p>
+      <div class="card-bottom"><span class="category-label">Vehicle</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('ev-cost')">
+      <div class="card-icon">⚡</div>
+      <h3>EV Charging Cost</h3>
+      <p>Estimate electric vehicle charging cost.</p>
+      <div class="card-bottom"><span class="category-label">Vehicle</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('fuel-savings')">
+      <div class="card-icon">💰</div>
+      <h3>Fuel Savings</h3>
+      <p>Compare fuel costs between two vehicles.</p>
+      <div class="card-bottom"><span class="category-label">Vehicle</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('car-loan')">
+      <div class="card-icon">🚙</div>
+      <h3>Car Loan EMI</h3>
+      <p>Calculate EMI for a vehicle loan.</p>
+      <div class="card-bottom"><span class="category-label">Vehicle</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('trip-cost')">
+      <div class="card-icon">🛣️</div>
+      <h3>Trip Cost</h3>
+      <p>Estimate total road trip cost per person.</p>
+      <div class="card-bottom"><span class="category-label">Vehicle</span><span class="arrow">→</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     EVERYDAY - 12
+     ========================================================= -->
+
+<section class="category-section" id="everyday">
+
+  <div class="category-heading">
+    <div>
+      <h2>🧮 Everyday Calculators</h2>
+      <p>Quick calculations for daily life.</p>
+    </div>
+    <span class="category-count">12 Tools</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openTool('percentage')">
+      <div class="card-icon">％</div>
+      <h3>Percentage Calculator</h3>
+      <p>Calculate percentages and percentage changes.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('discount')">
+      <div class="card-icon">🏷️</div>
+      <h3>Discount Calculator</h3>
+      <p>Calculate discount amount and final price.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('age')">
+      <div class="card-icon">🎂</div>
+      <h3>Age Calculator</h3>
+      <p>Calculate exact age from date of birth.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('date-difference')">
+      <div class="card-icon">📅</div>
+      <h3>Date Difference</h3>
+      <p>Calculate days between two dates.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('time-duration')">
+      <div class="card-icon">⏱️</div>
+      <h3>Time Duration</h3>
+      <p>Calculate duration between two times.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('tip')">
+      <div class="card-icon">💁</div>
+      <h3>Tip Calculator</h3>
+      <p>Calculate tip and total restaurant bill.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('bill-split')">
+      <div class="card-icon">🧑‍🤝‍🧑</div>
+      <h3>Bill Split</h3>
+      <p>Split a bill equally between people.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('average')">
+      <div class="card-icon">📊</div>
+      <h3>Average Calculator</h3>
+      <p>Calculate average of multiple numbers.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('ratio')">
+      <div class="card-icon">⚖️</div>
+      <h3>Ratio Calculator</h3>
+      <p>Simplify and compare two numbers.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('unit-converter')">
+      <div class="card-icon">🔄</div>
+      <h3>Unit Converter</h3>
+      <p>Convert common length, weight and temperature units.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('fraction-percent')">
+      <div class="card-icon">½</div>
+      <h3>Fraction to Percent</h3>
+      <p>Convert fractions into percentages.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('pace')">
+      <div class="card-icon">🏃</div>
+      <h3>Pace Calculator</h3>
+      <p>Calculate running or walking pace.</p>
+      <div class="card-bottom"><span class="category-label">Everyday</span><span class="arrow">→</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     BUSINESS - 7
+     ========================================================= -->
+
+<section class="category-section" id="business">
+
+  <div class="category-heading">
+    <div>
+      <h2>💼 Business & Work</h2>
+      <p>Useful calculators for business and income decisions.</p>
+    </div>
+    <span class="category-count">7 Tools</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openTool('profit-margin')">
+      <div class="card-icon">📈</div>
+      <h3>Profit Margin</h3>
+      <p>Calculate profit margin from sales and profit.</p>
+      <div class="card-bottom"><span class="category-label">Business</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('markup')">
+      <div class="card-icon">🏷️</div>
+      <h3>Markup Calculator</h3>
+      <p>Calculate selling price from cost and markup.</p>
+      <div class="card-bottom"><span class="category-label">Business</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('roi')">
+      <div class="card-icon">💹</div>
+      <h3>ROI Calculator</h3>
+      <p>Calculate return on investment percentage.</p>
+      <div class="card-bottom"><span class="category-label">Business</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('break-even')">
+      <div class="card-icon">⚖️</div>
+      <h3>Break-Even Calculator</h3>
+      <p>Find sales required to cover fixed costs.</p>
+      <div class="card-bottom"><span class="category-label">Business</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('sales-target')">
+      <div class="card-icon">🎯</div>
+      <h3>Sales Target</h3>
+      <p>Calculate units required to reach a sales target.</p>
+      <div class="card-bottom"><span class="category-label">Business</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('commission')">
+      <div class="card-icon">🤝</div>
+      <h3>Commission Calculator</h3>
+      <p>Calculate commission earned on sales.</p>
+      <div class="card-bottom"><span class="category-label">Business</span><span class="arrow">→</span></div>
+    </div>
+
+    <div class="card" onclick="openTool('profit')">
+      <div class="card-icon">💰</div>
+      <h3>Profit Calculator</h3>
+      <p>Calculate profit or loss from cost and selling price.</p>
+      <div class="card-bottom"><span class="category-label">Business</span><span class="arrow">→</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     TRUST
+     ========================================================= -->
+
+<section class="trust">
+
+  <h2>Simple tools. Clear results.</h2>
+
+  <p>
+    ToolMitra is designed to make everyday calculations
+    quick, understandable and accessible without requiring
+    an account.
+  </p>
+
+  <div class="trust-items">
+
+    <div class="trust-item">
+      <strong>⚡ Instant calculations</strong>
+      <span>Results are calculated directly in your browser.</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>📱 Mobile friendly</strong>
+      <span>Designed for phones, tablets and computers.</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>🆓 Free to use</strong>
+      <span>No registration or sign-up required.</span>
+    </div>
+
+  </div>
+
+</section>
+
+</div>
+
+
+<!-- =========================================================
+     DYNAMIC TOOL AREA
+     ========================================================= -->
+
 <div id="toolArea"></div>
+
 </main>
 
-<footer><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><h3>ToolMitra</h3><p>Free useful calculators and practical tools designed for everyday needs in India.</p></div><div class="footer-links"><a href="#" onclick="goHome();return false">Home</a><a href="#" onclick="goHome();return false">Tools</a><a href="#about">About</a><a href="#privacy">Privacy</a><a href="#disclaimer">Disclaimer</a></div></div><div class="footer-bottom">ToolMitra © 2026 · Free calculators and useful tools for India</div></div></footer>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <h3>ToolMitra</h3>
+
+        <p>
+          55 free calculators and useful tools designed
+          for everyday needs in India.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="#finance">Finance</a>
+        <a href="#tax">Tax</a>
+        <a href="#health">Health</a>
+        <a href="#vehicle">Vehicle</a>
+        <a href="#everyday">Everyday</a>
+        <a href="#business">Business</a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      ToolMitra © 2026 · Free tools for everyday India
+    </div>
+
+  </div>
+
+</footer>
+
 
 <script>
-const $=id=>document.getElementById(id);
-const money=n=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(n);
-const num=n=>new Intl.NumberFormat('en-IN',{maximumFractionDigits:2}).format(n);
-const valid=(...v)=>v.every(Number.isFinite);
-const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 
-const tools=[
-{id:'age',name:'Age Calculator',icon:'🎂',cat:'everyday',desc:'Calculate exact age in years, months and days.',keywords:'age birthday date dob'},
-{id:'emi',name:'EMI Calculator',icon:'💰',cat:'finance',desc:'Calculate monthly EMI, total interest and payment.',keywords:'emi loan home loan monthly payment interest'},
-{id:'sip',name:'SIP Calculator',icon:'📈',cat:'finance',desc:'Estimate future value of monthly SIP investments.',keywords:'sip mutual fund investment returns'},
-{id:'percentage',name:'Percentage Calculator',icon:'％',cat:'everyday',desc:'Calculate percentages, increases, decreases and changes.',keywords:'percentage percent increase decrease change'},
-{id:'gst',name:'GST Calculator',icon:'🧾',cat:'tax',desc:'Add or remove GST from an amount quickly.',keywords:'gst tax goods services inclusive exclusive'},
-{id:'discount',name:'Discount Calculator',icon:'🏷️',cat:'everyday',desc:'Calculate discount amount, savings and final price.',keywords:'discount sale price savings'},
-{id:'bmi',name:'BMI Calculator',icon:'⚖️',cat:'health',desc:'Calculate BMI from height and weight.',keywords:'bmi body mass index health weight height'},
-{id:'eligibility',name:'Loan Eligibility',icon:'🏦',cat:'finance',desc:'Estimate loan amount from income and existing EMIs.',keywords:'loan eligibility income home personal loan'},
-{id:'fuel',name:'Fuel Cost Calculator',icon:'⛽',cat:'vehicle',desc:'Estimate fuel required and trip cost.',keywords:'fuel petrol diesel vehicle mileage trip cost'},
-{id:'salary',name:'Salary Calculator',icon:'💼',cat:'finance',desc:'Estimate monthly salary after entered deductions.',keywords:'salary income ctc monthly annual take home'},
-{id:'compound',name:'Compound Interest',icon:'📊',cat:'finance',desc:'See how money grows with compounding.',keywords:'compound interest investment annual growth'},
-{id:'simpleInterest',name:'Simple Interest',icon:'➕',cat:'finance',desc:'Calculate simple interest and maturity amount.',keywords:'simple interest principal rate'},
-{id:'fd',name:'FD Calculator',icon:'🏛️',cat:'finance',desc:'Estimate fixed-deposit maturity value.',keywords:'fd fixed deposit maturity bank interest'},
-{id:'rd',name:'RD Calculator',icon:'🪙',cat:'finance',desc:'Estimate recurring-deposit maturity value.',keywords:'rd recurring deposit monthly maturity'},
-{id:'inflation',name:'Inflation Calculator',icon:'📉',cat:'finance',desc:'Estimate how inflation changes future prices.',keywords:'inflation purchasing power future price'},
-{id:'ev',name:'EV Charging Finder',icon:'🔋',cat:'vehicle',desc:'Find nearby EV charging stations using Maps.',keywords:'ev electric vehicle charging charger nearby station maps'},
-{id:'split',name:'Bill Splitter',icon:'🧑‍🤝‍🧑',cat:'everyday',desc:'Split a bill between people and add a tip.',keywords:'bill split restaurant friends tip'},
-{id:'unit',name:'Unit Converter',icon:'🔄',cat:'converter',desc:'Convert common length, weight and temperature units.',keywords:'unit converter length weight temperature km miles kg'},
-{id:'dateDiff',name:'Date Difference',icon:'📅',cat:'everyday',desc:'Find the number of days between two dates.',keywords:'date difference days between dates'},
-{id:'tip',name:'Tip Calculator',icon:'🍽️',cat:'everyday',desc:'Calculate tip amount and total bill.',keywords:'tip gratuity restaurant percentage'},
+/* =========================================================
+   TOOL DEFINITIONS
+   ========================================================= */
 
-{id:'incomeTax',name:'Income Tax Calculator',icon:'🇮🇳',cat:'tax',desc:'Estimate income tax using configurable India tax slabs.',keywords:'income tax itr tax slab new regime old regime india salary'},
-{id:'ppf',name:'PPF Calculator',icon:'🏦',cat:'finance',desc:'Estimate PPF maturity, deposits and interest.',keywords:'ppf public provident fund investment'},
-{id:'nps',name:'NPS Calculator',icon:'🧓',cat:'finance',desc:'Estimate NPS corpus and retirement annuity.',keywords:'nps pension retirement national pension system'},
-{id:'epf',name:'EPF Calculator',icon:'💼',cat:'finance',desc:'Estimate employee provident fund corpus.',keywords:'epf pf provident fund employee employer'},
-{id:'gratuity',name:'Gratuity Calculator',icon:'🎁',cat:'finance',desc:'Estimate gratuity using salary and completed service.',keywords:'gratuity employee salary service'},
-{id:'hra',name:'HRA Calculator',icon:'🏠',cat:'finance',desc:'Estimate HRA exemption under common rules.',keywords:'hra house rent allowance rent salary'},
-{id:'cagr',name:'CAGR Calculator',icon:'📈',cat:'finance',desc:'Calculate compound annual growth rate.',keywords:'cagr annual growth investment return'},
-{id:'xirr',name:'XIRR Calculator',icon:'💹',cat:'finance',desc:'Estimate annualized return for irregular cash flows.',keywords:'xirr irregular investment cash flow annual return'},
-{id:'lumpsum',name:'Lumpsum Calculator',icon:'💵',cat:'finance',desc:'Estimate future value of a one-time investment.',keywords:'lumpsum mutual fund investment'},
-{id:'stepup',name:'Step-up SIP Calculator',icon:'🚀',cat:'finance',desc:'Estimate SIP growth with an annual contribution increase.',keywords:'step up sip increasing sip investment'},
-{id:'swp',name:'SWP Calculator',icon:'🔁',cat:'finance',desc:'Estimate withdrawals and remaining investment corpus.',keywords:'swp systematic withdrawal plan mutual fund'},
-{id:'prepayment',name:'Home Loan Prepayment',icon:'🏠',cat:'finance',desc:'Estimate interest savings after a loan prepayment.',keywords:'home loan prepayment interest savings tenure'},
-{id:'loanCompare',name:'Loan Comparison',icon:'⚖️',cat:'finance',desc:'Compare two loan offers by EMI and total interest.',keywords:'loan comparison compare interest emi'},
-{id:'gstSplit',name:'GST Inclusive / Exclusive',icon:'🧾',cat:'tax',desc:'Quickly split GST from an inclusive amount.',keywords:'gst inclusive exclusive tax split'},
-{id:'tds',name:'TDS Calculator',icon:'📄',cat:'tax',desc:'Estimate TDS from a payment and TDS rate.',keywords:'tds tax deducted source'},
-{id:'mileage',name:'Mileage Calculator',icon:'🚗',cat:'vehicle',desc:'Calculate vehicle mileage from distance and fuel used.',keywords:'mileage kmpl vehicle fuel efficiency'},
-{id:'fuelKm',name:'Fuel Cost per KM',icon:'⛽',cat:'vehicle',desc:'Calculate your vehicle's fuel cost per kilometre.',keywords:'fuel cost per km petrol diesel'},
-{id:'evCost',name:'EV Charging Cost',icon:'🔌',cat:'vehicle',desc:'Estimate EV charging cost and cost per kilometre.',keywords:'ev charging electricity cost battery kwh'},
-{id:'evVsFuel',name:'EV vs Petrol/Diesel',icon:'⚡',cat:'vehicle',desc:'Compare running cost of EV and fuel vehicles.',keywords:'ev petrol diesel comparison running cost'},
-{id:'tripCost',name:'Vehicle Trip Cost',icon:'🛣️',cat:'vehicle',desc:'Estimate total trip cost including fuel and tolls.',keywords:'trip travel vehicle cost toll fuel'},
-{id:'carLoan',name:'Car Loan EMI',icon:'🚙',cat:'vehicle',desc:'Calculate EMI for a car loan.',keywords:'car loan emi vehicle finance'},
-{id:'bikeLoan',name:'Bike Loan EMI',icon:'🏍️',cat:'vehicle',desc:'Calculate EMI for a two-wheeler loan.',keywords:'bike loan emi motorcycle finance'},
+const tools = {
 
-{id:'profitLoss',name:'Profit & Loss',icon:'📦',cat:'everyday',desc:'Calculate profit, loss and percentages.',keywords:'profit loss selling cost price business'},
-{id:'ratio',name:'Ratio Calculator',icon:'➗',cat:'everyday',desc:'Simplify and scale ratios.',keywords:'ratio proportion simplify'},
-{id:'average',name:'Average Calculator',icon:'📊',cat:'everyday',desc:'Calculate the average of multiple numbers.',keywords:'average mean numbers'},
-{id:'markup',name:'Markup Calculator',icon:'🏷️',cat:'everyday',desc:'Calculate markup amount and selling price.',keywords:'markup margin selling price cost'},
-{id:'workingDays',name:'Working Days Calculator',icon:'💼',cat:'everyday',desc:'Count weekdays between two dates.',keywords:'working days weekdays business days'},
-{id:'dateAdd',name:'Date Add / Subtract',icon:'📅',cat:'everyday',desc:'Add or subtract days, weeks or months from a date.',keywords:'date add subtract days months'},
-{id:'timeDuration',name:'Time Duration Calculator',icon:'⏱️',cat:'everyday',desc:'Calculate duration between two times.',keywords:'time duration hours minutes time difference'},
+emi:{
+  title:"EMI Calculator",
+  desc:"Calculate monthly loan EMI, total interest and total payment.",
+  fields:[
+    ["amount","Loan Amount (₹)","number","500000"],
+    ["rate","Annual Interest Rate (%)","number","8.5"],
+    ["years","Loan Tenure (Years)","number","10"]
+  ]
+},
 
-{id:'area',name:'Area Converter',icon:'📐',cat:'converter',desc:'Convert square feet, metres, acres and more.',keywords:'area square feet square metre acre cent'},
-{id:'volume',name:'Volume Converter',icon:'🧪',cat:'converter',desc:'Convert litres, millilitres, gallons and cubic units.',keywords:'volume litre ml gallon cubic'},
-{id:'speed',name:'Speed Converter',icon:'🏎️',cat:'converter',desc:'Convert km/h, mph and metres per second.',keywords:'speed kmph mph meter second'},
-{id:'timeConvert',name:'Time Converter',icon:'🕐',cat:'converter',desc:'Convert seconds, minutes, hours and days.',keywords:'time converter seconds minutes hours'},
-{id:'dataConvert',name:'Data Converter',icon:'💾',cat:'converter',desc:'Convert bytes, KB, MB, GB and TB.',keywords:'data storage byte kb mb gb tb'},
-{id:'land',name:'Indian Land Converter',icon:'🌾',cat:'converter',desc:'Convert acre, cent, square feet and square metre.',keywords:'land acre cent guntha bigha square feet india'},
+sip:{
+  title:"SIP Calculator",
+  desc:"Estimate the future value of monthly SIP investments.",
+  fields:[
+    ["monthly","Monthly Investment (₹)","number","5000"],
+    ["rate","Expected Annual Return (%)","number","12"],
+    ["years","Investment Period (Years)","number","10"]
+  ]
+},
 
-{id:'bmr',name:'BMR Calculator',icon:'🔥',cat:'health',desc:'Estimate basal metabolic rate from basic inputs.',keywords:'bmr metabolism calories health'},
-{id:'calorie',name:'Calorie Calculator',icon:'🥗',cat:'health',desc:'Estimate daily calorie needs using activity level.',keywords:'calorie calories tdee diet activity'},
-{id:'idealWeight',name:'Ideal Weight Calculator',icon:'⚖️',cat:'health',desc:'Estimate an ideal-weight range using height.',keywords:'ideal weight height health'},
-{id:'water',name:'Water Intake Calculator',icon:'💧',cat:'health',desc:'Estimate daily water intake from body weight.',keywords:'water intake hydration health'}
-];
+lumpsum:{
+  title:"Lumpsum Calculator",
+  desc:"Estimate growth of a one-time investment.",
+  fields:[
+    ["principal","Initial Investment (₹)","number","100000"],
+    ["rate","Expected Annual Return (%)","number","12"],
+    ["years","Investment Period (Years)","number","10"]
+  ]
+},
 
-const cats=[['all','All'],['finance','Finance'],['tax','Tax'],['health','Health'],['vehicle','Vehicle'],['everyday','Everyday'],['converter','Converter']];
-let currentCat='all';
+fd:{
+  title:"FD Calculator",
+  desc:"Estimate fixed deposit maturity value.",
+  fields:[
+    ["principal","Deposit Amount (₹)","number","100000"],
+    ["rate","Annual Interest Rate (%)","number","7"],
+    ["years","Tenure (Years)","number","5"],
+    ["freq","Compounding","select","4",[
+      ["1","Annually"],
+      ["2","Half-yearly"],
+      ["4","Quarterly"],
+      ["12","Monthly"]
+    ]]
+  ]
+},
 
-function renderCategories(){
-  $('categories').innerHTML=cats.map(([id,label])=>`<button class="category-btn ${id==='all'?'active':''}" onclick="setCat('${id}')">${label}</button>`).join('');
+rd:{
+  title:"RD Calculator",
+  desc:"Estimate recurring deposit maturity amount.",
+  fields:[
+    ["monthly","Monthly Deposit (₹)","number","5000"],
+    ["rate","Annual Interest Rate (%)","number","7"],
+    ["years","Tenure (Years)","number","5"]
+  ]
+},
+
+ppf:{
+  title:"PPF Calculator",
+  desc:"Estimate PPF growth using yearly contribution and assumed rate.",
+  fields:[
+    ["yearly","Yearly Contribution (₹)","number","100000"],
+    ["rate","Annual Interest Rate (%)","number","7.1"],
+    ["years","Period (Years)","number","15"]
+  ]
+},
+
+nps:{
+  title:"NPS Calculator",
+  desc:"Estimate NPS corpus and annuity amount.",
+  fields:[
+    ["monthly","Monthly Contribution (₹)","number","5000"],
+    ["rate","Expected Annual Return (%)","number","10"],
+    ["years","Investment Period (Years)","number","25"],
+    ["annuity","Annuity Percentage (%)","number","40"]
+  ]
+},
+
+"simple-interest":{
+  title:"Simple Interest Calculator",
+  desc:"Calculate simple interest and maturity amount.",
+  fields:[
+    ["principal","Principal (₹)","number","100000"],
+    ["rate","Interest Rate (%)","number","8"],
+    ["years","Time (Years)","number","5"]
+  ]
+},
+
+"compound-interest":{
+  title:"Compound Interest Calculator",
+  desc:"Calculate compound interest and final amount.",
+  fields:[
+    ["principal","Principal (₹)","number","100000"],
+    ["rate","Annual Rate (%)","number","8"],
+    ["years","Time (Years)","number","5"],
+    ["freq","Compounding","select","4",[
+      ["1","Annually"],
+      ["2","Half-yearly"],
+      ["4","Quarterly"],
+      ["12","Monthly"]
+    ]]
+  ]
+},
+
+cagr:{
+  title:"CAGR Calculator",
+  desc:"Calculate annualized investment growth rate.",
+  fields:[
+    ["start","Starting Value (₹)","number","100000"],
+    ["end","Ending Value (₹)","number","200000"],
+    ["years","Period (Years)","number","5"]
+  ]
+},
+
+inflation:{
+  title:"Inflation Calculator",
+  desc:"Estimate the future value of money after inflation.",
+  fields:[
+    ["amount","Current Amount (₹)","number","100000"],
+    ["rate","Inflation Rate (%)","number","6"],
+    ["years","Years","number","10"]
+  ]
+},
+
+retirement:{
+  title:"Retirement Calculator",
+  desc:"Estimate future retirement savings.",
+  fields:[
+    ["current","Current Savings (₹)","number","500000"],
+    ["monthly","Monthly Contribution (₹)","number","10000"],
+    ["rate","Expected Annual Return (%)","number","10"],
+    ["years","Years to Retirement","number","20"]
+  ]
+},
+
+"savings-goal":{
+  title:"Savings Goal Calculator",
+  desc:"Calculate monthly investment required to reach a target.",
+  fields:[
+    ["target","Target Amount (₹)","number","1000000"],
+    ["current","Current Savings (₹)","number","100000"],
+    ["rate","Expected Annual Return (%)","number","10"],
+    ["years","Time Period (Years)","number","5"]
+  ]
+},
+
+"loan-eligibility":{
+  title:"Loan Eligibility Calculator",
+  desc:"Estimate potential loan amount from income and existing EMIs.",
+  fields:[
+    ["income","Monthly Income (₹)","number","50000"],
+    ["existing","Existing EMIs (₹)","number","5000"],
+    ["foir","Maximum EMI Ratio (%)","number","50"],
+    ["rate","Interest Rate (%)","number","9"],
+    ["years","Tenure (Years)","number","20"]
+  ]
+},
+
+"loan-comparison":{
+  title:"Loan Comparison Calculator",
+  desc:"Compare EMI and total interest for two interest rates.",
+  fields:[
+    ["amount","Loan Amount (₹)","number","1000000"],
+    ["rate1","Interest Rate A (%)","number","8.5"],
+    ["rate2","Interest Rate B (%)","number","9"],
+    ["years","Tenure (Years)","number","20"]
+  ]
+},
+
+gst:{
+  title:"GST Calculator",
+  desc:"Add GST to an amount.",
+  fields:[
+    ["amount","Amount Before GST (₹)","number","1000"],
+    ["rate","GST Rate (%)","number","18"]
+  ]
+},
+
+"gst-reverse":{
+  title:"GST Reverse Calculator",
+  desc:"Remove GST from a GST-inclusive amount.",
+  fields:[
+    ["amount","GST Inclusive Amount (₹)","number","1180"],
+    ["rate","GST Rate (%)","number","18"]
+  ]
+},
+
+"tax-amount":{
+  title:"Tax Amount Calculator",
+  desc:"Calculate tax using your entered tax rate.",
+  fields:[
+    ["amount","Taxable Amount (₹)","number","100000"],
+    ["rate","Tax Rate (%)","number","10"]
+  ]
+},
+
+tds:{
+  title:"TDS Calculator",
+  desc:"Estimate TDS deducted from a payment.",
+  fields:[
+    ["amount","Payment Amount (₹)","number","50000"],
+    ["rate","TDS Rate (%)","number","10"]
+  ]
+},
+
+"gst-split":{
+  title:"CGST / SGST Split Calculator",
+  desc:"Calculate CGST and SGST from a GST rate.",
+  fields:[
+    ["amount","Base Amount (₹)","number","10000"],
+    ["rate","GST Rate (%)","number","18"]
+  ]
+},
+
+"salary-after-tax":{
+  title:"Salary After Tax Calculator",
+  desc:"Estimate take-home salary using an entered tax rate.",
+  fields:[
+    ["annual","Annual Salary (₹)","number","600000"],
+    ["tax","Tax Rate (%)","number","10"],
+    ["deductions","Other Annual Deductions (₹)","number","0"]
+  ]
+},
+
+bmi:{
+  title:"BMI Calculator",
+  desc:"Calculate Body Mass Index from height and weight.",
+  fields:[
+    ["weight","Weight (kg)","number","70"],
+    ["height","Height (cm)","number","170"]
+  ]
+},
+
+bmr:{
+  title:"BMR Calculator",
+  desc:"Estimate basal metabolic rate.",
+  fields:[
+    ["gender","Gender","select","male",[
+      ["male","Male"],
+      ["female","Female"]
+    ]],
+    ["age","Age (Years)","number","30"],
+    ["weight","Weight (kg)","number","70"],
+    ["height","Height (cm)","number","170"]
+  ]
+},
+
+calories:{
+  title:"Calorie Calculator",
+  desc:"Estimate daily calorie needs.",
+  fields:[
+    ["gender","Gender","select","male",[
+      ["male","Male"],
+      ["female","Female"]
+    ]],
+    ["age","Age (Years)","number","30"],
+    ["weight","Weight (kg)","number","70"],
+    ["height","Height (cm)","number","170"],
+    ["activity","Activity Level","select","1.375",[
+      ["1.2","Sedentary"],
+      ["1.375","Light activity"],
+      ["1.55","Moderate activity"],
+      ["1.725","Very active"],
+      ["1.9","Extra active"]
+    ]]
+  ]
+},
+
+"ideal-weight":{
+  title:"Ideal Weight Calculator",
+  desc:"Estimate ideal weight using height.",
+  fields:[
+    ["height","Height (cm)","number","170"],
+    ["gender","Gender","select","male",[
+      ["male","Male"],
+      ["female","Female"]
+    ]]
+  ]
+},
+
+water:{
+  title:"Water Intake Calculator",
+  desc:"Estimate daily water requirement.",
+  fields:[
+    ["weight","Weight (kg)","number","70"]
+  ]
+},
+
+"body-fat":{
+  title:"Body Fat Estimate",
+  desc:"Estimate body fat percentage using basic measurements.",
+  fields:[
+    ["gender","Gender","select","male",[
+      ["male","Male"],
+      ["female","Female"]
+    ]],
+    ["height","Height (cm)","number","170"],
+    ["waist","Waist (cm)","number","85"],
+    ["neck","Neck (cm)","number","38"],
+    ["hip","Hip (cm)","number","95"]
+  ]
+},
+
+pregnancy:{
+  title:"Due Date Calculator",
+  desc:"Estimate due date from the first day of the last menstrual period.",
+  fields:[
+    ["lmp","First Day of Last Period","date",""]
+  ]
+},
+
+macros:{
+  title:"Macro Calculator",
+  desc:"Estimate protein, carbohydrates and fat targets.",
+  fields:[
+    ["calories","Daily Calories","number","2000"],
+    ["protein","Protein (%)","number","30"],
+    ["fat","Fat (%)","number","30"]
+  ]
+},
+
+"fuel-cost":{
+  title:"Fuel Cost Calculator",
+  desc:"Calculate estimated fuel cost for a trip.",
+  fields:[
+    ["distance","Distance (km)","number","300"],
+    ["mileage","Mileage (km/l)","number","18"],
+    ["price","Fuel Price (₹/litre)","number","100"]
+  ]
+},
+
+"fuel-needed":{
+  title:"Fuel Needed Calculator",
+  desc:"Calculate fuel required for a journey.",
+  fields:[
+    ["distance","Distance (km)","number","300"],
+    ["mileage","Mileage (km/l)","number","18"]
+  ]
+},
+
+mileage:{
+  title:"Mileage Calculator",
+  desc:"Calculate vehicle mileage.",
+  fields:[
+    ["distance","Distance Travelled (km)","number","300"],
+    ["fuel","Fuel Used (litres)","number","20"]
+  ]
+},
+
+"ev-cost":{
+  title:"EV Charging Cost Calculator",
+  desc:"Estimate electric vehicle charging cost.",
+  fields:[
+    ["battery","Battery Capacity (kWh)","number","40"],
+    ["charge","Percentage Charged (%)","number","80"],
+    ["price","Electricity Price (₹/kWh)","number","8"]
+  ]
+},
+
+"fuel-savings":{
+  title:"Fuel Savings Calculator",
+  desc:"Compare fuel costs between two vehicles.",
+  fields:[
+    ["distance","Monthly Distance (km)","number","1500"],
+    ["mileage1","Vehicle A Mileage (km/l)","number","15"],
+    ["mileage2","Vehicle B Mileage (km/l)","number","20"],
+    ["price","Fuel Price (₹/litre)","number","100"]
+  ]
+},
+
+"car-loan":{
+  title:"Car Loan EMI Calculator",
+  desc:"Calculate EMI for a vehicle loan.",
+  fields:[
+    ["amount","Car Loan Amount (₹)","number","800000"],
+    ["rate","Interest Rate (%)","number","9"],
+    ["years","Tenure (Years)","number","7"]
+  ]
+},
+
+"trip-cost":{
+  title:"Trip Cost Calculator",
+  desc:"Estimate total road trip cost per person.",
+  fields:[
+    ["distance","Total Distance (km)","number","500"],
+    ["mileage","Vehicle Mileage (km/l)","number","18"],
+    ["fuel","Fuel Price (₹/litre)","number","100"],
+    ["toll","Tolls & Other Costs (₹)","number","1000"],
+    ["people","Number of People","number","4"]
+  ]
+},
+
+percentage:{
+  title:"Percentage Calculator",
+  desc:"Calculate percentages and percentage changes.",
+  fields:[
+    ["mode","Calculation","select","of",[
+      ["of","X% of Y"],
+      ["what","X is what % of Y"],
+      ["change","Increase / Decrease"],
+      ["difference","Percentage Change"]
+    ]],
+    ["x","First / Percentage / Old Value","number","15"],
+    ["y","Second / New Value","number","2000"]
+  ]
+},
+
+discount:{
+  title:"Discount Calculator",
+  desc:"Calculate discount and final selling price.",
+  fields:[
+    ["price","Original Price (₹)","number","2000"],
+    ["rate","Discount (%)","number","20"]
+  ]
+},
+
+age:{
+  title:"Age Calculator",
+  desc:"Calculate exact age from date of birth.",
+  fields:[
+    ["dob","Date of Birth","date",""]
+  ]
+},
+
+"date-difference":{
+  title:"Date Difference Calculator",
+  desc:"Calculate the number of days between two dates.",
+  fields:[
+    ["start","Start Date","date",""],
+    ["end","End Date","date",""]
+  ]
+},
+
+"time-duration":{
+  title:"Time Duration Calculator",
+  desc:"Calculate duration between two times.",
+  fields:[
+    ["start","Start Time","time","09:00"],
+    ["end","End Time","time","17:30"]
+  ]
+},
+
+tip:{
+  title:"Tip Calculator",
+  desc:"Calculate tip and total bill.",
+  fields:[
+    ["bill","Bill Amount (₹)","number","1000"],
+    ["rate","Tip (%)","number","10"]
+  ]
+},
+
+"bill-split":{
+  title:"Bill Split Calculator",
+  desc:"Split a bill equally between people.",
+  fields:[
+    ["bill","Total Bill (₹)","number","2000"],
+    ["people","Number of People","number","4"]
+  ]
+},
+
+average:{
+  title:"Average Calculator",
+  desc:"Calculate the average of multiple numbers.",
+  fields:[
+    ["numbers","Numbers separated by commas","text","10,20,30,40,50"]
+  ]
+},
+
+ratio:{
+  title:"Ratio Calculator",
+  desc:"Simplify a ratio.",
+  fields:[
+    ["a","First Number","number","20"],
+    ["b","Second Number","number","30"]
+  ]
+},
+
+"unit-converter":{
+  title:"Unit Converter",
+  desc:"Convert common length, weight and temperature units.",
+  fields:[
+    ["type","Conversion Type","select","length",[
+      ["length","Length"],
+      ["weight","Weight"],
+      ["temperature","Temperature"]
+    ]],
+    ["value","Value","number","100"],
+    ["from","From Unit","select","km",[
+      ["km","Kilometre"],
+      ["m","Metre"],
+      ["mile","Mile"],
+      ["kg","Kilogram"],
+      ["lb","Pound"],
+      ["c","Celsius"],
+      ["f","Fahrenheit"]
+    ]],
+    ["to","To Unit","select","m",[
+      ["km","Kilometre"],
+      ["m","Metre"],
+      ["mile","Mile"],
+      ["kg","Kilogram"],
+      ["lb","Pound"],
+      ["c","Celsius"],
+      ["f","Fahrenheit"]
+    ]]
+  ]
+},
+
+"fraction-percent":{
+  title:"Fraction to Percent Calculator",
+  desc:"Convert a fraction into a percentage.",
+  fields:[
+    ["numerator","Numerator","number","1"],
+    ["denominator","Denominator","number","4"]
+  ]
+},
+
+pace:{
+  title:"Pace Calculator",
+  desc:"Calculate running or walking pace.",
+  fields:[
+    ["distance","Distance (km)","number","5"],
+    ["minutes","Time (minutes)","number","30"]
+  ]
+},
+
+"profit-margin":{
+  title:"Profit Margin Calculator",
+  desc:"Calculate profit margin from sales and profit.",
+  fields:[
+    ["sales","Sales Revenue (₹)","number","100000"],
+    ["profit","Profit (₹)","number","20000"]
+  ]
+},
+
+markup:{
+  title:"Markup Calculator",
+  desc:"Calculate selling price from cost and markup.",
+  fields:[
+    ["cost","Cost Price (₹)","number","1000"],
+    ["markup","Markup (%)","number","25"]
+  ]
+},
+
+roi:{
+  title:"ROI Calculator",
+  desc:"Calculate return on investment.",
+  fields:[
+    ["investment","Initial Investment (₹)","number","100000"],
+    ["return","Final Value (₹)","number","130000"]
+  ]
+},
+
+"break-even":{
+  title:"Break-Even Calculator",
+  desc:"Calculate units needed to cover fixed costs.",
+  fields:[
+    ["fixed","Fixed Costs (₹)","number","100000"],
+    ["price","Selling Price per Unit (₹)","number","1000"],
+    ["variable","Variable Cost per Unit (₹)","number","600"]
+  ]
+},
+
+"sales-target":{
+  title:"Sales Target Calculator",
+  desc:"Calculate units required to reach a sales target.",
+  fields:[
+    ["target","Sales Target (₹)","number","100000"],
+    ["price","Selling Price per Unit (₹)","number","1000"]
+  ]
+},
+
+commission:{
+  title:"Commission Calculator",
+  desc:"Calculate commission earned on sales.",
+  fields:[
+    ["sales","Sales Amount (₹)","number","100000"],
+    ["rate","Commission (%)","number","5"]
+  ]
+},
+
+profit:{
+  title:"Profit Calculator",
+  desc:"Calculate profit or loss.",
+  fields:[
+    ["cost","Cost Price (₹)","number","80000"],
+    ["selling","Selling Price (₹)","number","100000"]
+  ]
 }
-function norm(s){return s.toLowerCase().replace(/[^\p{L}\p{N}%]+/gu,' ').trim()}
-function scoreTool(q,t){
-  if(!q)return 1;
-  const query=norm(q), hay=norm(t.name+' '+t.keywords+' '+t.desc), tokens=query.split(/\s+/).filter(Boolean);
-  let s=0;if(hay.includes(query))s+=50;if(norm(t.name).includes(query))s+=60;
-  tokens.forEach(x=>{if(hay.includes(x))s+=10});
-  return s;
-}
-function renderCards(){
-  const q=$('search').value.trim();
-  const arr=tools.map(t=>({...t,s:scoreTool(q,t)})).filter(t=>t.s>0&&(currentCat==='all'||t.cat===currentCat)).sort((a,b)=>b.s-a.s);
-  $('toolGrid').innerHTML=arr.map(t=>`<div class="card" onclick="openTool('${t.id}')"><div class="card-icon">${t.icon}</div><h3>${esc(t.name)}</h3><p>${esc(t.desc)}</p><div class="card-bottom"><span class="category-label">${t.cat}</span><span class="arrow">→</span></div></div>`).join('');
-  $('noResults').style.display=arr.length?'none':'block';
-  $('clear').style.display=q?'block':'none';
-}
-function setCat(c){currentCat=c;document.querySelectorAll('.category-btn').forEach((b,i)=>b.classList.toggle('active',cats[i][0]===c));renderCards()}
-$('search').addEventListener('input',renderCards);
-$('clear').onclick=()=>{$('search').value='';renderCards();$('search').focus()};
 
-function field(id,label,type='number',placeholder='',opts=''){return `<label>${label}</label>${type==='select'?`<select id="${id}">${opts}</select>`:`<input id="${id}" type="${type}" placeholder="${placeholder}" ${type==='number'?'step="any"':''}>`}`}
-function shell(t,body,note=''){
-  return `<div class="tool active" id="activeTool"><button class="back" onclick="goHome()">← All tools</button><div class="tool-header"><h2>${t.icon} ${t.name}</h2><p>${t.desc}</p></div>${body}<button class="calculate" onclick="calculate('${t.id}')">Calculate</button><button class="reset" onclick="resetActive()">Reset</button><div class="result" id="result">Enter your details.</div>${note?`<div class="note">${note}</div>`:''}</div>`;
+};
+
+
+/* =========================================================
+   FORMATTERS
+   ========================================================= */
+
+function money(n){
+
+  return new Intl.NumberFormat("en-IN",{
+    style:"currency",
+    currency:"INR",
+    maximumFractionDigits:2
+  }).format(n);
+
 }
-function f(id,l,p){return field(id,l,'number',p)}
+
+function num(n){
+
+  return new Intl.NumberFormat("en-IN",{
+    maximumFractionDigits:2
+  }).format(n);
+
+}
+
+function val(id){
+
+  const el=document.getElementById("field_"+id);
+
+  if(!el) return "";
+
+  return el.value;
+
+}
+
+function numberVal(id){
+
+  return parseFloat(val(id));
+
+}
+
+
+/* =========================================================
+   OPEN TOOL
+   ========================================================= */
+
 function openTool(id){
-  const t=tools.find(x=>x.id===id);if(!t)return;
-  $('home').style.display='none';$('toolArea').innerHTML=shell(t,toolBody(id),toolNote(id));window.scrollTo({top:0,behavior:'smooth'});localStorage.setItem('toolmitraLastTool',id);
+
+  const tool=tools[id];
+
+  if(!tool) return;
+
+  document.getElementById("home").style.display="none";
+
+  const area=document.getElementById("toolArea");
+
+  let html=`
+
+    <div class="tool active" id="activeTool">
+
+      <button class="back" onclick="goHome()">
+        ← All tools
+      </button>
+
+      <div class="tool-header">
+
+        <h2>${tool.title}</h2>
+
+        <p>${tool.desc}</p>
+
+      </div>
+
+      <div class="form-grid">
+  `;
+
+  tool.fields.forEach(field=>{
+
+    const id=field[0];
+    const label=field[1];
+    const type=field[2];
+    const placeholder=field[3];
+
+    html+=`<div>`;
+
+    html+=`<label for="field_${id}">${label}</label>`;
+
+    if(type==="select"){
+
+      html+=`
+        <select id="field_${id}">
+      `;
+
+      field[4].forEach(option=>{
+
+        html+=`
+          <option value="${option[0]}"
+            ${option[0]===placeholder?"selected":""}>
+            ${option[1]}
+          </option>
+        `;
+
+      });
+
+      html+=`</select>`;
+
+    }else{
+
+      html+=`
+        <input
+          id="field_${id}"
+          type="${type}"
+          placeholder="${placeholder}">
+      `;
+
+    }
+
+    html+=`</div>`;
+
+  });
+
+  html+=`
+
+      </div>
+
+      <button class="calculate" onclick="calculateTool('${id}')">
+        Calculate
+      </button>
+
+      <button class="reset" onclick="resetCurrentTool()">
+        Reset
+      </button>
+
+      <div class="result" id="toolResult">
+        Enter your details.
+      </div>
+
+      <p class="small">
+        Results are estimates for general information.
+        Financial, tax and health calculations should not be
+        treated as professional advice.
+      </p>
+
+    </div>
+  `;
+
+  area.innerHTML=html;
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
 }
-function goHome(){$('toolArea').innerHTML='';$('home').style.display='block';window.scrollTo({top:0,behavior:'smooth'})}
-function toolBody(id){
-switch(id){
-case'age':return field('dob','Date of Birth','date');
-case'emi':return `<div class="form-grid">${f('loanAmount','Loan Amount (₹)','500000')}${f('loanRate','Annual Interest (%)','8.5')}${f('loanYears','Loan Tenure (Years)','10')}</div>`;
-case'sip':return `<div class="form-grid">${f('sipAmount','Monthly Investment (₹)','5000')}${f('sipRate','Expected Annual Return (%)','12')}${f('sipYears','Investment Period (Years)','10')}</div>`;
-case'percentage':return `<div class="form-grid">${f('pX','Percentage (%)','15')}${f('pY','Number','2000')}</div><p class="small">Calculates X% of Y.</p>`;
-case'gst':return `<div class="form-grid">${f('gstAmount','Amount (₹)','1000')}${f('gstRate','GST Rate (%)','18')}</div>${field('gstType','Calculation','select','','<option value="add">Add GST</option><option value="remove">Remove GST</option>')}`;
-case'discount':return `${f('originalPrice','Original Price (₹)','2000')}${f('discountRate','Discount (%)','20')}`;
-case'bmi':return `<div class="form-grid">${f('weight','Weight (kg)','70')}${f('height','Height (cm)','170')}</div>`;
-case'eligibility':return `<div class="form-grid">${f('income','Monthly Income (₹)','50000')}${f('existingEMI','Existing Monthly EMIs (₹)','5000')}${f('eligRate','Interest Rate (%)','9')}${f('eligYears','Tenure (Years)','20')}</div>`;
-case'fuel':return `<div class="form-grid">${f('distance','Distance (km)','300')}${f('mileage','Mileage (km/litre)','18')}${f('fuelPrice','Fuel Price (₹/litre)','100')}</div>`;
-case'salary':return `${f('annualSalary','Annual Salary / CTC (₹)','600000')}${f('deductions','Monthly Deductions (₹)','5000')}`;
-case'compound':return `<div class="form-grid">${f('ciPrincipal','Principal (₹)','100000')}${f('ciRate','Annual Rate (%)','8')}${f('ciYears','Time (Years)','10')}${field('ciFreq','Compounds / Year','select','','<option value="1">Yearly</option><option value="2">Half-yearly</option><option value="4">Quarterly</option><option value="12" selected>Monthly</option>')}</div>`;
-case'simpleInterest':return `${f('siPrincipal','Principal (₹)','100000')}${f('siRate','Annual Rate (%)','8')}${f('siYears','Time (Years)','3')}`;
-case'fd':return `${f('fdPrincipal','Deposit Amount (₹)','100000')}${f('fdRate','Annual Interest Rate (%)','7')}${f('fdYears','Tenure (Years)','5')}`;
-case'rd':return `${f('rdMonthly','Monthly Deposit (₹)','5000')}${f('rdRate','Annual Interest Rate (%)','7')}${f('rdYears','Tenure (Years)','5')}`;
-case'inflation':return `${f('inflationAmount','Current Amount / Price (₹)','100000')}${f('inflationRate','Annual Inflation (%)','6')}${f('inflationYears','Years','10')}`;
-case'ev':return `${field('evLocation','Search Location (optional)','text','e.g. Kochi, Kerala or near me')}<div class="result" id="evResult">Enter a location, then use the button below.</div><a id="evMaps" target="_blank" rel="noopener" style="display:block;text-align:center;margin-top:12px;padding:13px;border-radius:11px;background:#2563eb;color:white;text-decoration:none;font-weight:750">📍 Find EV Chargers on Maps</a>`;
-case'split':return `<div class="form-grid">${f('billAmount','Total Bill (₹)','2000')}${f('people','Number of People','4')}${f('tipRate','Tip (%) – optional','0')}</div>`;
-case'unit':return `${field('unitCategory','Category','select','','<option value="length">Length</option><option value="weight">Weight</option><option value="temperature">Temperature</option>')}<div class="form-grid">${field('unitFrom','From','select','','<option>Metres</option><option>Kilometres</option><option>Centimetres</option><option>Miles</option><option>Feet</option><option>Inches</option>')}${field('unitTo','To','select','','<option>Miles</option><option>Kilometres</option><option>Metres</option><option>Feet</option><option>Inches</option>')}</div>${f('unitValue','Value','100')}`;
-case'dateDiff':return `${field('dateStart','Start Date','date')}${field('dateEnd','End Date','date')}`;
-case'tip':return `${f('tipBill','Bill Amount (₹)','1000')}${f('tipPercent','Tip (%)','10')}`;
 
-case'incomeTax':return `${f('taxIncome','Annual Taxable Income (₹)','1200000')}${field('taxRegime','Regime','select','','<option value="new">New Regime – editable slabs below</option><option value="old">Old Regime – simplified estimate</option>')}<div class="form-grid">${f('taxDeduction','Eligible Deductions (₹)','150000')}${f('taxRebate','Tax Rebate / Relief (₹)','0')}</div><p class="small">The calculator uses a simplified, editable slab model. Verify current assessment-year rules before filing.</p>`;
-case'ppf':return `<div class="form-grid">${f('ppfAnnual','Annual Deposit (₹)','150000')}${f('ppfRate','Interest Rate (%)','7.1')}${f('ppfYears','Years','15')}</div>`;
-case'nps':return `<div class="form-grid">${f('npsMonthly','Monthly Contribution (₹)','10000')}${f('npsRate','Expected Return (%)','10')}${f('npsYears','Investment Years','25')}${f('npsAnnuity','Annuity Portion (%)','40')}</div>`;
-case'epf':return `<div class="form-grid">${f('epfBasic','Monthly Basic + DA (₹)','30000')}${f('epfEmployee','Employee Contribution (%)','12')}${f('epfEmployer','Employer Contribution (%)','12')}${f('epfRate','Annual EPF Interest (%)','8.25')}${f('epfYears','Years','20')}</div>`;
-case'gratuity':return `<div class="form-grid">${f('gratSalary','Last Drawn Basic + DA (₹)','50000')}${f('gratYears','Completed Years of Service','10')}</div>`;
-case'hra':return `<div class="form-grid">${f('hraBasic','Basic Salary (₹/month)','50000')}${f('hraReceived','HRA Received (₹/month)','20000')}${f('hraRent','Monthly Rent Paid (₹)','25000')}${f('hraRate','HRA % of Basic','50')}</div>`;
-case'cagr':return `<div class="form-grid">${f('cagrStart','Initial Value (₹)','100000')}${f('cagrEnd','Final Value (₹)','200000')}${f('cagrYears','Years','5')}</div>`;
-case'xirr':return `${f('xirrInitial','Initial Investment (₹)','100000')}${f('xirrFinal','Final Value (₹)','160000')}${f('xirrDays','Days Held','730')}<p class="small">For a simple one-investment/one-exit case. Multiple irregular cash flows require an expanded cash-flow table.</p>`;
-case'lumpsum':return `<div class="form-grid">${f('lumpAmount','Investment (₹)','100000')}${f('lumpRate','Expected Annual Return (%)','12')}${f('lumpYears','Years','10')}</div>`;
-case'stepup':return `<div class="form-grid">${f('stepMonthly','Starting Monthly SIP (₹)','5000')}${f('stepRate','Expected Return (%)','12')}${f('stepYears','Years','15')}${f('stepUp','Annual SIP Increase (%)','10')}</div>`;
-case'swp':return `<div class="form-grid">${f('swpCorpus','Starting Corpus (₹)','1000000')}${f('swpWithdrawal','Monthly Withdrawal (₹)','10000')}${f('swpRate','Expected Annual Return (%)','10')}${f('swpYears','Years','10')}</div>`;
-case'prepayment':return `<div class="form-grid">${f('preP','Outstanding Loan (₹)','3000000')}${f('preRate','Interest Rate (%)','8.5')}${f('preYears','Remaining Years','15')}${f('prePay','Prepayment Amount (₹)','500000')}</div>`;
-case'loanCompare':return `<div class="form-grid">${f('lcA','Loan A Amount (₹)','3000000')}${f('lcAR','Loan A Rate (%)','8.5')}${f('lcAY','Loan A Years','15')}${f('lcB','Loan B Amount (₹)','3000000')}${f('lcBR','Loan B Rate (%)','9')}${f('lcBY','Loan B Years','15')}</div>`;
-case'gstSplit':return `${f('gsiAmount','GST-Inclusive Amount (₹)','1180')}${f('gsiRate','GST Rate (%)','18')}`;
-case'tds':return `${f('tdsAmount','Payment Amount (₹)','100000')}${f('tdsRate','TDS Rate (%)','10')}`;
 
-case'mileage':return `${f('mileDistance','Distance Driven (km)','500')}${f('mileFuel','Fuel Used (litres)','30')}`;
-case'fuelKm':return `${f('fkmMileage','Mileage (km/litre)','18')}${f('fkmPrice','Fuel Price (₹/litre)','100')}`;
-case'evCost':return `<div class="form-grid">${f('evBattery','Battery / Energy Used (kWh)','40')}${f('evPrice','Electricity Price (₹/kWh)','8')}${f('evRange','Range (km)','250')}</div>`;
-case'evVsFuel':return `<div class="form-grid">${f('evKwh','EV Consumption (kWh/100km)','15')}${f('evElec','Electricity ₹/kWh','8')}${f('fuelKpl','Fuel Mileage (km/l)','18')}${f('fuelP','Fuel Price ₹/l','100')}</div>`;
-case'tripCost':return `<div class="form-grid">${f('tripDistance','Distance (km)','500')}${f('tripMileage','Mileage (km/l)','18')}${f('tripFuelPrice','Fuel Price (₹/l)','100')}${f('tripToll','Tolls (₹)','500')}${f('tripParking','Parking/Other (₹)','200')}</div>`;
-case'carLoan':return `<div class="form-grid">${f('carPrice','Car Price (₹)','1000000')}${f('carDown','Down Payment (₹)','200000')}${f('carRate','Interest (%)','9')}${f('carYears','Tenure (Years)','5')}</div>`;
-case'bikeLoan':return `<div class="form-grid">${f('bikePrice','Bike Price (₹)','150000')}${f('bikeDown','Down Payment (₹)','30000')}${f('bikeRate','Interest (%)','10')}${f('bikeYears','Tenure (Years)','3')}</div>`;
+/* =========================================================
+   GO HOME
+   ========================================================= */
 
-case'profitLoss':return `<div class="form-grid">${f('costPrice','Cost Price (₹)','1000')}${f('sellPrice','Selling Price (₹)','1200')}</div>`;
-case'ratio':return `<div class="form-grid">${f('ratioA','First Number','12')}${f('ratioB','Second Number','18')}</div>`;
-case'average':return `${field('avgNumbers','Numbers (comma separated)','text','10,20,30,40')}`;
-case'markup':return `<div class="form-grid">${f('markCost','Cost Price (₹)','1000')}${f('markRate','Markup (%)','25')}</div>`;
-case'workingDays':return `${field('workStart','Start Date','date')}${field('workEnd','End Date','date')}`;
-case'dateAdd':return `<div class="form-grid">${field('daDate','Start Date','date')}${f('daAmount','Amount','30')}</div>${field('daUnit','Unit','select','','<option value="days">Days</option><option value="weeks">Weeks</option><option value="months">Months</option>')} ${field('daAction','Action','select','','<option value="add">Add</option><option value="subtract">Subtract</option>')}`;
-case'timeDuration':return `<div class="form-grid">${field('timeStart','Start Time','time')}${field('timeEnd','End Time','time')}</div>`;
+function goHome(){
 
-case'area':return `${field('areaFrom','From','select','','<option value="sqft">Square feet</option><option value="sqm">Square metre</option><option value="acre">Acre</option><option value="cent">Cent</option><option value="sqyd">Square yard</option>')}${field('areaTo','To','select','','<option value="sqm">Square metre</option><option value="sqft">Square feet</option><option value="acre">Acre</option><option value="cent">Cent</option><option value="sqyd">Square yard</option>')}${f('areaValue','Value','1000')}`;
-case'volume':return `${field('volFrom','From','select','','<option value="litre">Litre</option><option value="ml">Millilitre</option><option value="gallon">US Gallon</option><option value="cubicm">Cubic metre</option>')}${field('volTo','To','select','','<option value="ml">Millilitre</option><option value="litre">Litre</option><option value="gallon">US Gallon</option><option value="cubicm">Cubic metre</option>')}${f('volValue','Value','1')}`;
-case'speed':return `${field('speedFrom','From','select','','<option value="kmh">km/h</option><option value="mph">mph</option><option value="ms">m/s</option>')}${field('speedTo','To','select','','<option value="mph">mph</option><option value="kmh">km/h</option><option value="ms">m/s</option>')}${f('speedValue','Value','60')}`;
-case'timeConvert':return `${field('timeFrom','From','select','','<option value="seconds">Seconds</option><option value="minutes">Minutes</option><option value="hours">Hours</option><option value="days">Days</option>')}${field('timeTo','To','select','','<option value="minutes">Minutes</option><option value="hours">Hours</option><option value="seconds">Seconds</option><option value="days">Days</option>')}${f('timeValue','Value','60')}`;
-case'dataConvert':return `${field('dataFrom','From','select','','<option value="B">Bytes</option><option value="KB">KB</option><option value="MB">MB</option><option value="GB">GB</option><option value="TB">TB</option>')}${field('dataTo','To','select','','<option value="MB">MB</option><option value="GB">GB</option><option value="KB">KB</option><option value="B">Bytes</option><option value="TB">TB</option>')}${f('dataValue','Value','1')}`;
-case'land':return `${field('landFrom','From','select','','<option value="sqft">Square feet</option><option value="sqm">Square metre</option><option value="acre">Acre</option><option value="cent">Cent</option><option value="guntha">Guntha</option>')}${field('landTo','To','select','','<option value="cent">Cent</option><option value="sqft">Square feet</option><option value="sqm">Square metre</option><option value="acre">Acre</option><option value="guntha">Guntha</option>')}${f('landValue','Value','1')}`;
+  document.getElementById("toolArea").innerHTML="";
 
-case'bmr':return `<div class="form-grid">${f('bmrWeight','Weight (kg)','70')}${f('bmrHeight','Height (cm)','170')}${f('bmrAge','Age','30')}</div>${field('bmrSex','Sex','select','','<option value="male">Male</option><option value="female">Female</option>')}`;
-case'calorie':return `<div class="form-grid">${f('calWeight','Weight (kg)','70')}${f('calHeight','Height (cm)','170')}${f('calAge','Age','30')}</div>${field('calSex','Sex','select','','<option value="male">Male</option><option value="female">Female</option>')}${field('calActivity','Activity','select','','<option value="1.2">Sedentary</option><option value="1.375">Light</option><option value="1.55">Moderate</option><option value="1.725">Very active</option><option value="1.9">Extra active</option>')}`;
-case'idealWeight':return `${f('iwHeight','Height (cm)','170')}`;
-case'water':return `${f('waterWeight','Body Weight (kg)','70')}`;
-default:return '';
-}}
-function toolNote(id){
- if(['incomeTax','ppf','nps','epf','gratuity','hra','tds'].includes(id))return 'Estimate only. Rules, rates, eligibility and tax treatment can change. Verify with the relevant official source before making financial or tax decisions.';
- if(['bmi','bmr','calorie','idealWeight','water'].includes(id))return 'General estimate only; not medical advice or a diagnosis.';
- return '';
+  document.getElementById("home").style.display="block";
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
 }
 
-function emi(P,annual,years){let n=years*12,r=annual/1200;return r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)}
-function setResult(x){$('result').innerHTML=x}
 
-function calculate(id){
-const v=n=>+$(n).value;
-switch(id){
-case'age':{let val=$('dob').value;if(!val)return setResult('Please enter your date of birth.');let [y,m,d]=val.split('-').map(Number),dob=new Date(y,m-1,d),now=new Date();if(dob>now)return setResult('Date of birth cannot be in the future.');let Y=now.getFullYear()-y,M=now.getMonth()-(m-1),D=now.getDate()-d;if(D<0){M--;D+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}if(M<0){Y--;M+=12}setResult(`Age: <span class="big">${Y} years</span>, ${M} months, ${D} days`);break}
-case'emi':{let P=v('loanAmount'),r=v('loanRate'),y=v('loanYears');if(!valid(P,r,y)||P<=0||r<0||y<=0)return setResult('Please enter valid loan details.');let e=emi(P,r,y),tot=e*y*12;setResult(`Monthly EMI: <span class="big">${money(e)}</span><br>Total Payment: ${money(tot)}<br>Total Interest: ${money(tot-P)}`);break}
-case'sip':{let p=v('sipAmount'),r=v('sipRate'),y=v('sipYears');if(!valid(p,r,y)||p<=0||r<0||y<=0)return setResult('Please enter valid details.');let n=y*12,m=r/1200,A=m? p*((Math.pow(1+m,n)-1)/m)*(1+m):p*n,I=p*n;setResult(`Estimated Value: <span class="big">${money(A)}</span><br>Invested: ${money(I)}<br>Estimated Gain: ${money(A-I)}`);break}
-case'percentage':setResult(valid(v('pX'),v('pY'))?`${num(v('pX'))}% of ${num(v('pY'))} = <span class="big">${num(v('pX')*v('pY')/100)}</span>`:'Please enter both numbers.');break;
-case'gst':{let a=v('gstAmount'),r=v('gstRate');if(!valid(a,r)||a<0||r<0)return setResult('Please enter valid values.');let base,g,t;if($('gstType').value==='add'){base=a;g=a*r/100;t=a+g}else{t=a;base=a/(1+r/100);g=t-base}setResult(`Base Amount: ${money(base)}<br>GST: ${money(g)}<br>Total: <span class="big">${money(t)}</span>`);break}
-case'discount':{let p=v('originalPrice'),r=v('discountRate');if(!valid(p,r)||p<0||r<0||r>100)return setResult('Enter a discount between 0% and 100%.');let d=p*r/100;setResult(`Discount: ${money(d)}<br>Final Price: <span class="big">${money(p-d)}</span>`);break}
-case'bmi':{let w=v('weight'),h=v('height');if(w<=0||h<=0)return setResult('Please enter valid height and weight.');let b=w/((h/100)**2),c=b<18.5?'Underweight':b<25?'Normal range':b<30?'Overweight':'Obesity range';setResult(`BMI: <span class="big">${num(b)}</span><br>Category: ${c}`);break}
-case'eligibility':{let inc=v('income'),ex=v('existingEMI')||0,r=v('eligRate'),y=v('eligYears');let cap=inc*.5-ex;if(cap<=0)return setResult('No additional EMI capacity under this simple 50% assumption.');let L=cap/emi(1,r,y);setResult(`Estimated Loan Amount: <span class="big">${money(L)}</span><br>Maximum Assumed EMI: ${money(cap)}`);break}
-case'fuel':{let d=v('distance'),m=v('mileage'),p=v('fuelPrice');if(d<=0||m<=0||p<0)return setResult('Please enter valid trip details.');setResult(`Fuel Required: ${num(d/m)} litres<br>Fuel Cost: <span class="big">${money(d/m*p)}</span>`);break}
-case'salary':{let a=v('annualSalary'),d=v('deductions')||0;let g=a/12;setResult(`Gross Monthly: ${money(g)}<br>Estimated Take-home: <span class="big">${money(Math.max(0,g-d))}</span>`);break}
-case'compound':{let P=v('ciPrincipal'),r=v('ciRate'),t=v('ciYears'),n=v('ciFreq'),A=P*(1+r/100/n)**(n*t);setResult(`Future Value: <span class="big">${money(A)}</span><br>Interest: ${money(A-P)}`);break}
-case'simpleInterest':{let P=v('siPrincipal'),r=v('siRate'),t=v('siYears'),I=P*r*t/100;setResult(`Simple Interest: ${money(I)}<br>Total: <span class="big">${money(P+I)}</span>`);break}
-case'fd':{let P=v('fdPrincipal'),r=v('fdRate'),t=v('fdYears'),A=P*(1+r/100)**t;setResult(`Maturity: <span class="big">${money(A)}</span><br>Interest: ${money(A-P)}`);break}
-case'rd':{let p=v('rdMonthly'),r=v('rdRate'),y=v('rdYears'),months=Math.round(y*12),q=r/400,A=0;for(let m=1;m<=months;m++)A+=p*(1+q)**((months-m)/3);setResult(`Estimated Maturity: <span class="big">${money(A)}</span><br>Total Deposits: ${money(p*months)}<br>Interest: ${money(A-p*months)}`);break}
-case'inflation':{let a=v('inflationAmount'),r=v('inflationRate'),y=v('inflationYears'),A=a*(1+r/100)**y;setResult(`Future Price: <span class="big">${money(A)}</span><br>Increase: ${money(A-a)}`);break}
-case'ev':{let loc=$('evLocation').value.trim(),q=loc?`EV charging stations near ${loc}`:'EV charging stations near me';$('evMaps').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);$('evResult').innerHTML='Ready. Tap <strong>Find EV Chargers on Maps</strong>.';break}
-case'split':{let b=v('billAmount'),p=v('people'),t=v('tipRate')||0,T=b*(1+t/100);setResult(`Tip: ${money(b*t/100)}<br>Total: ${money(T)}<br>Each Person: <span class="big">${money(T/p)}</span>`);break}
-case'unit':convertBasic();break;
-case'dateDiff':{let a=new Date($('dateStart').value+'T00:00:00'),b=new Date($('dateEnd').value+'T00:00:00');if(isNaN(a)||isNaN(b))return setResult('Select both dates.');setResult(`Difference: <span class="big">${num(Math.round(Math.abs(b-a)/86400000))} days</span>`);break}
-case'tip':{let b=v('tipBill'),p=v('tipPercent'),t=b*p/100;setResult(`Tip: ${money(t)}<br>Total Bill: <span class="big">${money(b+t)}</span>`);break}
+/* =========================================================
+   CALCULATE
+   ========================================================= */
 
-case'incomeTax':{let income=Math.max(0,v('taxIncome')-(v('taxRegime').value==='old'?v('taxDeduction'):0)),reb=v('taxRebate')||0;
-let slabs=v('taxRegime').value==='new'?[{l:400000,r:.0},{l:800000,r:.05},{l:1200000,r:.10},{l:1600000,r:.15},{l:2000000,r:.20},{l:2400000,r:.25},{l:Infinity,r:.30}]:[{l:250000,r:0},{l:500000,r:.05},{l:1000000,r:.20},{l:Infinity,r:.30}];
-let prev=0,tax=0;for(const s of slabs){let amt=Math.max(0,Math.min(income,s.l)-prev);tax+=amt*s.r;prev=s.l;if(income<=s.l)break}tax=Math.max(0,tax-reb);let cess=tax*.04;setResult(`Estimated Tax: <span class="big">${money(tax+cess)}</span><br>Tax before 4% cess: ${money(tax)}<br>4% cess: ${money(cess)}`);break}
-case'ppf':{let p=v('ppfAnnual'),r=v('ppfRate')/100,y=v('ppfYears'),A=0;for(let i=0;i<y;i++)A=(A+p)*(1+r);setResult(`Estimated Maturity: <span class="big">${money(A)}</span><br>Total Deposits: ${money(p*y)}<br>Estimated Interest: ${money(A-p*y)}`);break}
-case'nps':{let p=v('npsMonthly'),r=v('npsRate')/1200,y=v('npsYears'),n=y*12,A=r?p*((1+r)**n-1)/r*(1+r):p*n,ann=v('npsAnnuity');setResult(`Estimated Corpus: <span class="big">${money(A)}</span><br>Annuity Portion (${ann}%): ${money(A*ann/100)}<br>Remaining Lump Sum: ${money(A*(1-ann/100))}`);break}
-case'epf':{let basic=v('epfBasic'),er=v('epfEmployee')/100,rr=v('epfEmployer')/100,rate=v('epfRate')/1200,n=v('epfYears')*12,con=basic*(er+rr),A=rate?con*((1+rate)**n-1)/rate:con*n;setResult(`Estimated EPF Corpus: <span class="big">${money(A)}</span><br>Monthly Combined Contribution: ${money(con)}`);break}
-case'gratuity':{let sal=v('gratSalary'),years=Math.floor(v('gratYears')),g=sal*15/26*years;setResult(`Estimated Gratuity: <span class="big">${money(g)}</span>`);break}
-case'hra':{let basic=v('hraBasic'),hra=v('hraReceived'),rent=v('hraRent'),pct=v('hraRate')/100,ex=Math.max(0,Math.min(hra,rent-0.1*basic,basic*pct));setResult(`Estimated HRA Exemption: <span class="big">${money(ex)}</span><br>Taxable HRA component: ${money(Math.max(0,hra-ex))}`);break}
-case'cagr':{let a=v('cagrStart'),b=v('cagrEnd'),y=v('cagrYears'),c=((b/a)**(1/y)-1)*100;setResult(`CAGR: <span class="big">${num(c)}%</span>`);break}
-case'xirr':{let a=v('xirrInitial'),b=v('xirrFinal'),days=v('xirrDays'),x=(b/a)**(365/days)-1;setResult(`Estimated Annualized Return: <span class="big">${num(x*100)}%</span>`);break}
-case'lumpsum':{let A=v('lumpAmount')*(1+v('lumpRate')/100)**v('lumpYears');setResult(`Future Value: <span class="big">${money(A)}</span><br>Gain: ${money(A-v('lumpAmount'))}`);break}
-case'stepup':{let p=v('stepMonthly'),rr=v('stepRate')/1200,y=v('stepYears'),up=v('stepUp')/100,A=0,invest=0;for(let year=1;year<=y;year++){let pm=p*(1+up)**(year-1);for(let m=0;m<12;m++){A=A*(1+rr)+pm;invest+=pm}}setResult(`Estimated Value: <span class="big">${money(A)}</span><br>Total Invested: ${money(invest)}<br>Estimated Gain: ${money(A-invest)}`);break}
-case'swp':{let A=v('swpCorpus'),r=v('swpRate')/1200,w=v('swpWithdrawal'),n=v('swpYears')*12;for(let i=0;i<n;i++){A=A*(1+r)-w;if(A<=0){A=0;break}}setResult(`Estimated Remaining Corpus: <span class="big">${money(A)}</span><br>Total Withdrawals: ${money(w*n)}`);break}
-case'prepayment':{let P=v('preP'),r=v('preRate'),y=v('preYears'),pay=v('prePay'),old=emi(P,r,y),newP=Math.max(0,P-pay),ne=emi(newP,r,y),oldTot=old*y*12,newTot=ne*y*12;setResult(`Old EMI: ${money(old)}<br>New EMI: ${money(ne)}<br>Approx. Interest Saving: <span class="big">${money((oldTot-P)-(newTot-newP))}</span>`);break}
-case'loanCompare':{let a=emi(v('lcA'),v('lcAR'),v('lcAY')),b=emi(v('lcB'),v('lcBR'),v('lcBY'));setResult(`Loan A EMI: ${money(a)}<br>Loan B EMI: <span class="big">${money(b)}</span><br>Lower EMI: ${money(Math.min(a,b))}`);break}
-case'gstSplit':{let a=v('gsiAmount'),r=v('gsiRate'),base=a/(1+r/100),g=a-base;setResult(`Base Amount: ${money(base)}<br>GST Included: <span class="big">${money(g)}</span><br>Total: ${money(a)}`);break}
-case'tds':{let a=v('tdsAmount'),r=v('tdsRate'),t=a*r/100;setResult(`TDS: <span class="big">${money(t)}</span><br>Net Payment: ${money(a-t)}`);break}
+function calculateTool(id){
 
-case'mileage':{let d=v('mileDistance'),fuel=v('mileFuel');setResult(`Mileage: <span class="big">${num(d/fuel)} km/l</span>`);break}
-case'fuelKm':{let m=v('fkmMileage'),p=v('fkmPrice');setResult(`Fuel Cost per KM: <span class="big">${money(p/m)}</span>`);break}
-case'evCost':{let k=v('evBattery'),p=v('evPrice'),range=v('evRange');setResult(`Charging Cost: <span class="big">${money(k*p)}</span><br>Cost per KM: ${money(k*p/range)}`);break}
-case'evVsFuel':{let ev=v('evKwh')*v('evElec')/100,fu=v('fuelP')/v('fuelKpl');setResult(`EV Cost / km: <span class="big">${money(ev)}</span><br>Fuel Cost / km: ${money(fu)}<br>EV Saving / km: ${money(fu-ev)}`);break}
-case'tripCost':{let fuel=v('tripDistance')/v('tripMileage')*v('tripFuelPrice'),total=fuel+v('tripToll')+v('tripParking');setResult(`Fuel: ${money(fuel)}<br>Total Trip Cost: <span class="big">${money(total)}</span>`);break}
-case'carLoan':{let P=Math.max(0,v('carPrice')-v('carDown')),e=emi(P,v('carRate'),v('carYears')),tot=e*v('carYears')*12;setResult(`Loan Amount: ${money(P)}<br>EMI: <span class="big">${money(e)}</span><br>Total Interest: ${money(tot-P)}`);break}
-case'bikeLoan':{let P=Math.max(0,v('bikePrice')-v('bikeDown')),e=emi(P,v('bikeRate'),v('bikeYears')),tot=e*v('bikeYears')*12;setResult(`Loan Amount: ${money(P)}<br>EMI: <span class="big">${money(e)}</span><br>Total Interest: ${money(tot-P)}`);break}
+  let r="";
 
-case'profitLoss':{let c=v('costPrice'),s=v('sellPrice'),d=s-c,p=Math.abs(d/c*100);setResult(d>=0?`Profit: <span class="big">${money(d)}</span><br>Profit %: ${num(p)}%`:`Loss: <span class="big">${money(Math.abs(d))}</span><br>Loss %: ${num(p)}%`);break}
-case'ratio':{let a=v('ratioA'),b=v('ratioB'),g=gcd(Math.abs(a),Math.abs(b));setResult(`Simplified Ratio: <span class="big">${a/g} : ${b/g}</span>`);break}
-case'average':{let arr=$('avgNumbers').value.split(',').map(Number).filter(Number.isFinite);if(!arr.length)return setResult('Enter comma-separated numbers.');setResult(`Average: <span class="big">${num(arr.reduce((a,b)=>a+b,0)/arr.length)}</span><br>Count: ${arr.length}`);break}
-case'markup':{let c=v('markCost'),r=v('markRate'),m=c*r/100;setResult(`Markup: ${money(m)}<br>Selling Price: <span class="big">${money(c+m)}</span>`);break}
-case'workingDays':{let a=new Date($('workStart').value+'T00:00:00'),b=new Date($('workEnd').value+'T00:00:00'),start=Math.min(a,b),end=Math.max(a,b),n=0;for(let d=new Date(start);d<=end;d.setDate(d.getDate()+1)){let day=d.getDay();if(day!==0&&day!==6)n++}setResult(`Weekdays: <span class="big">${n}</span>`);break}
-case'dateAdd':{let d=new Date($('daDate').value+'T00:00:00'),a=v('daAmount'),unit=$('daUnit').value*(1);if($('daAction').value==='subtract')a=-a;if(unit==='days')d.setDate(d.getDate()+a);else if(unit==='weeks')d.setDate(d.getDate()+a*7);else d.setMonth(d.getMonth()+a);setResult(`Result Date: <span class="big">${d.toLocaleDateString('en-IN')}</span>`);break}
-case'timeDuration':{let a=$('timeStart').value.split(':').map(Number),b=$('timeEnd').value.split(':').map(Number);let x=a[0]*60+a[1],y=b[0]*60+b[1],d=(y-x+1440)%1440;setResult(`Duration: <span class="big">${Math.floor(d/60)} hours ${d%60} minutes</span>`);break}
+  try{
 
-case'area':convertFactor('area',{'sqft':1,'sqm':10.7639104167,'acre':43560,'cent':435.6,'sqyd':9},'areaValue','areaFrom','areaTo');break;
-case'volume':convertFactor('volume',{'litre':1,'ml':.001,'gallon':3.785411784,'cubicm':1000},'volValue','volFrom','volTo');break;
-case'speed':convertFactor('speed',{'kmh':1,'mph':1.609344,'ms':3.6},'speedValue','speedFrom','speedTo');break;
-case'timeConvert':convertFactor('time',{'seconds':1,'minutes':60,'hours':3600,'days':86400},'timeValue','timeFrom','timeTo');break;
-case'dataConvert':convertFactor('data',{'B':1,'KB':1024,'MB':1024**2,'GB':1024**3,'TB':1024**4},'dataValue','dataFrom','dataTo');break;
-case'land':convertFactor('land',{'sqft':1,'sqm':10.7639104167,'acre':43560,'cent':435.6,'guntha':1089},'landValue','landFrom','landTo');break;
+    /* EMI */
 
-case'bmr':{let w=v('bmrWeight'),h=v('bmrHeight'),a=v('bmrAge'),b=10*w+6.25*h-5*a+($('bmrSex').value==='male'?5:-161);setResult(`Estimated BMR: <span class="big">${num(b)} kcal/day</span>`);break}
-case'calorie':{let w=v('calWeight'),h=v('calHeight'),a=v('calAge'),b=10*w+6.25*h-5*a+($('calSex').value==='male'?5:-161),t=b*v('calActivity');setResult(`Estimated Daily Calories: <span class="big">${num(t)} kcal/day</span><br>Estimated BMR: ${num(b)} kcal/day`);break}
-case'idealWeight':{let h=v('iwHeight'),m=18.5*(h/100)**2,x=24.9*(h/100)**2;setResult(`General BMI-based range: <span class="big">${num(m)}–${num(x)} kg</span>`);break}
-case'water':{let w=v('waterWeight');setResult(`Estimated Daily Water: <span class="big">${num(w*35)} ml</span><br>≈ ${num(w*.035)} litres`);break}
-}}
-function gcd(a,b){while(b){[a,b]=[b,a%b]}return a||1}
-function convertBasic(){
-const cat=$('unitCategory').value,v=+$('unitValue').value,from=$('unitFrom').value,to=$('unitTo').value;
-const defs={length:{Metres:1,Kilometres:1000,Centimetres:.01,Miles:1609.344,Feet:.3048,Inches:.0254},weight:{Kilograms:1,Grams:.001,Pounds:.45359237,Ounces:.0283495231}};
-let out=v*defs[cat][from]/defs[cat][to];setResult(`${num(v)} ${from} = <span class="big">${num(out)}</span> ${to}`);
+    if(id==="emi" || id==="car-loan"){
+
+      const P=numberVal("amount");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+
+      if(P<=0 || rate<0 || years<=0)
+        return showError("Please enter valid loan details.");
+
+      const n=years*12;
+      const m=rate/12/100;
+
+      const emi=m===0
+        ? P/n
+        : P*m*Math.pow(1+m,n)/(Math.pow(1+m,n)-1);
+
+      r=
+        `Monthly EMI: ${money(emi)}<br>
+         Total Payment: ${money(emi*n)}<br>
+         Total Interest: ${money(emi*n-P)}`;
+
+    }
+
+
+    /* SIP */
+
+    else if(id==="sip"){
+
+      const monthly=numberVal("monthly");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+
+      if(monthly<=0 || rate<0 || years<=0)
+        return showError("Please enter valid investment details.");
+
+      const n=years*12;
+      const m=rate/12/100;
+
+      const future=m===0
+        ? monthly*n
+        : monthly*((Math.pow(1+m,n)-1)/m)*(1+m);
+
+      const invested=monthly*n;
+
+      r=
+        `Estimated Value: ${money(future)}<br>
+         Invested Amount: ${money(invested)}<br>
+         Estimated Gain: ${money(future-invested)}`;
+
+    }
+
+
+    /* LUMPSUM */
+
+    else if(id==="lumpsum"){
+
+      const p=numberVal("principal");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+
+      if(p<=0 || rate<0 || years<=0)
+        return showError("Please enter valid values.");
+
+      const future=p*Math.pow(1+rate/100,years);
+
+      r=
+        `Future Value: ${money(future)}<br>
+         Investment: ${money(p)}<br>
+         Estimated Gain: ${money(future-p)}`;
+
+    }
+
+
+    /* FD / COMPOUND */
+
+    else if(id==="fd" || id==="compound-interest"){
+
+      const p=numberVal("principal");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+      const freq=numberVal("freq");
+
+      if(p<=0 || rate<0 || years<=0)
+        return showError("Please enter valid values.");
+
+      const amount=
+        p*Math.pow(1+(rate/100)/freq,freq*years);
+
+      r=
+        `Maturity Amount: ${money(amount)}<br>
+         Principal: ${money(p)}<br>
+         Interest: ${money(amount-p)}`;
+
+    }
+
+
+    /* RD */
+
+    else if(id==="rd"){
+
+      const monthly=numberVal("monthly");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+
+      if(monthly<=0 || rate<0 || years<=0)
+        return showError("Please enter valid values.");
+
+      const n=years*12;
+      const m=rate/12/100;
+
+      const amount=m===0
+        ? monthly*n
+        : monthly*((Math.pow(1+m,n)-1)/m)*(1+m);
+
+      r=
+        `Estimated Maturity: ${money(amount)}<br>
+         Total Deposited: ${money(monthly*n)}<br>
+         Estimated Interest: ${money(amount-monthly*n)}`;
+
+    }
+
+
+    /* PPF */
+
+    else if(id==="ppf"){
+
+      const yearly=numberVal("yearly");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+
+      if(yearly<=0 || rate<0 || years<=0)
+        return showError("Please enter valid values.");
+
+      let balance=0;
+
+      for(let i=0;i<years;i++){
+        balance=(balance+yearly)*(1+rate/100);
+      }
+
+      r=
+        `Estimated Value: ${money(balance)}<br>
+         Total Contribution: ${money(yearly*years)}<br>
+         Estimated Growth: ${money(balance-yearly*years)}`;
+
+    }
+
+
+    /* NPS */
+
+    else if(id==="nps"){
+
+      const monthly=numberVal("monthly");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+      const annuity=numberVal("annuity");
+
+      if(monthly<=0 || rate<0 || years<=0 || annuity<0 || annuity>100)
+        return showError("Please enter valid values.");
+
+      const n=years*12;
+      const m=rate/12/100;
+
+      const corpus=m===0
+        ? monthly*n
+        : monthly*((Math.pow(1+m,n)-1)/m)*(1+m);
+
+      const annuityAmount=corpus*annuity/100;
+
+      r=
+        `Estimated Corpus: ${money(corpus)}<br>
+         Annuity Portion: ${money(annuityAmount)}<br>
+         Remaining Corpus: ${money(corpus-annuityAmount)}`;
+
+    }
+
+
+    /* SIMPLE INTEREST */
+
+    else if(id==="simple-interest"){
+
+      const p=numberVal("principal");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+
+      if(p<=0 || rate<0 || years<=0)
+        return showError("Please enter valid values.");
+
+      const interest=p*rate*years/100;
+
+      r=
+        `Simple Interest: ${money(interest)}<br>
+         Total Amount: ${money(p+interest)}`;
+
+    }
+
+
+    /* CAGR */
+
+    else if(id==="cagr"){
+
+      const start=numberVal("start");
+      const end=numberVal("end");
+      const years=numberVal("years");
+
+      if(start<=0 || end<=0 || years<=0)
+        return showError("Please enter valid values.");
+
+      const cagr=(Math.pow(end/start,1/years)-1)*100;
+
+      r=
+        `CAGR: ${num(cagr)}%<br>
+         Starting Value: ${money(start)}<br>
+         Ending Value: ${money(end)}`;
+
+    }
+
+
+    /* INFLATION */
+
+    else if(id==="inflation"){
+
+      const amount=numberVal("amount");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+
+      if(amount<=0 || rate<0 || years<=0)
+        return showError("Please enter valid values.");
+
+      const future=amount*Math.pow(1+rate/100,years);
+
+      r=
+        `Future Equivalent Cost: ${money(future)}<br>
+         Current Amount: ${money(amount)}<br>
+         Increase: ${money(future-amount)}`;
+
+    }
+
+
+    /* RETIREMENT */
+
+    else if(id==="retirement"){
+
+      const current=numberVal("current");
+      const monthly=numberVal("monthly");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+
+      if(current<0 || monthly<0 || rate<0 || years<=0)
+        return showError("Please enter valid values.");
+
+      const n=years*12;
+      const m=rate/12/100;
+
+      const currentFuture=
+        current*Math.pow(1+m,n);
+
+      const contributionFuture=
+        m===0
+          ? monthly*n
+          : monthly*((Math.pow(1+m,n)-1)/m)*(1+m);
+
+      const corpus=currentFuture+contributionFuture;
+
+      r=
+        `Estimated Retirement Corpus: ${money(corpus)}<br>
+         Current Savings Growth: ${money(currentFuture)}<br>
+         Future Value of Contributions: ${money(contributionFuture)}`;
+
+    }
+
+
+    /* SAVINGS GOAL */
+
+    else if(id==="savings-goal"){
+
+      const target=numberVal("target");
+      const current=numberVal("current");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+
+      if(target<=0 || current<0 || rate<0 || years<=0)
+        return showError("Please enter valid values.");
+
+      const n=years*12;
+      const m=rate/12/100;
+
+      const currentFuture=
+        current*Math.pow(1+m,n);
+
+      const needed=Math.max(0,target-currentFuture);
+
+      const monthly=m===0
+        ? needed/n
+        : needed*m/((Math.pow(1+m,n)-1)*(1+m));
+
+      r=
+        `Required Monthly Investment: ${money(monthly)}<br>
+         Target Amount: ${money(target)}<br>
+         Current Savings: ${money(current)}`;
+
+    }
+
+
+    /* LOAN ELIGIBILITY */
+
+    else if(id==="loan-eligibility"){
+
+      const income=numberVal("income");
+      const existing=numberVal("existing")||0;
+      const foir=numberVal("foir");
+      const rate=numberVal("rate");
+      const years=numberVal("years");
+
+      if(income<=0 || existing<0 || foir<=0 || rate<0 || years<=0)
+        return showError("Please enter valid values.");
+
+      const maxEmi=income*foir/100-existing;
+
+      if(maxEmi<=0)
+        return showError("No additional EMI capacity based on these assumptions.");
+
+      const n=years*12;
+      const m=rate/12/100;
+
+      const loan=m===0
+        ? maxEmi*n
+        : maxEmi*(Math.pow(1+m,n)-1)/(m*Math.pow(1+m,n));
+
+      r=
+        `Estimated Loan Amount: ${money(loan)}<br>
+         Maximum EMI Capacity: ${money(maxEmi)}`;
+
+    }
+
+
+    /* LOAN COMPARISON */
+
+    else if(id==="loan-comparison"){
+
+      const P=numberVal("amount");
+      const r1=numberVal("rate1");
+      const r2=numberVal("rate2");
+      const years=numberVal("years");
+
+      if(P<=0 || r1<0 || r2<0 || years<=0)
+        return showError("Please enter valid values.");
+
+      const n=years*12;
+
+      function emi(rate){
+        const m=rate/12/100;
+        return m===0
+          ? P/n
+          : P*m*Math.pow(1+m,n)/(Math.pow(1+m,n)-1);
+      }
+
+      const e1=emi(r1);
+      const e2=emi(r2);
+
+      r=
+        `Option A EMI: ${money(e1)}<br>
+         Option B EMI: ${money(e2)}<br>
+         EMI Difference: ${money(Math.abs(e1-e2))}<br>
+         Total Interest A: ${money(e1*n-P)}<br>
+         Total Interest B: ${money(e2*n-P)}`;
+
+    }
+
+
+    /* GST */
+
+    else if(id==="gst"){
+
+      const amount=numberVal("amount");
+      const rate=numberVal("rate");
+
+      if(amount<0 || rate<0)
+        return showError("Please enter valid values.");
+
+      const gst=amount*rate/100;
+
+      r=
+        `Base Amount: ${money(amount)}<br>
+         GST: ${money(gst)}<br>
+         Total: ${money(amount+gst)}`;
+
+    }
+
+
+    /* GST REVERSE */
+
+    else if(id==="gst-reverse"){
+
+      const amount=numberVal("amount");
+      const rate=numberVal("rate");
+
+      if(amount<0 || rate<0)
+        return showError("Please enter valid values.");
+
+      const base=amount/(1+rate/100);
+      const gst=amount-base;
+
+      r=
+        `Original Amount: ${money(base)}<br>
+         GST Included: ${money(gst)}<br>
+         Total: ${money(amount)}`;
+
+    }
+
+
+    /* TAX */
+
+    else if(id==="tax-amount" || id==="tds"){
+
+      const amount=numberVal("amount");
+      const rate=numberVal("rate");
+
+      if(amount<0 || rate<0)
+        return showError("Please enter valid values.");
+
+      const tax=amount*rate/100;
+
+      r=
+        `Tax / TDS Amount: ${money(tax)}<br>
+         Amount After Deduction: ${money(amount-tax)}`;
+
+    }
+
+
+    /* GST SPLIT */
+
+    else if(id==="gst-split"){
+
+      const amount=numberVal("amount");
+      const rate=numberVal("rate");
+
+      if(amount<0 || rate<0)
+        return showError("Please enter valid values.");
+
+      const gst=amount*rate/100;
+      const half=gst/2;
+
+      r=
+        `CGST: ${money(half)}<br>
+         SGST: ${money(half)}<br>
+         Total GST: ${money(gst)}<br>
+         Final Amount: ${money(amount+gst)}`;
+
+    }
+
+
+    /* SALARY AFTER TAX */
+
+    else if(id==="salary-after-tax"){
+
+      const annual=numberVal("annual");
+      const tax=numberVal("tax");
+      const deductions=numberVal("deductions")||0;
+
+      if(annual<0 || tax<0 || deductions<0)
+        return showError("Please enter valid values.");
+
+      const taxAmount=annual*tax/100;
+      const takeHome=Math.max(0,annual-taxAmount-deductions);
+
+      r=
+        `Annual Take-Home: ${money(takeHome)}<br>
+         Estimated Monthly Take-Home: ${money(takeHome/12)}<br>
+         Estimated Tax: ${money(taxAmount)}`;
+
+    }
+
+
+    /* BMI */
+
+    else if(id==="bmi"){
+
+      const weight=numberVal("weight");
+      const height=numberVal("height")/100;
+
+      if(weight<=0 || height<=0)
+        return showError("Please enter valid height and weight.");
+
+      const bmi=weight/(height*height);
+
+      let category=
+        bmi<18.5?"Underweight":
+        bmi<25?"Normal range":
+        bmi<30?"Overweight":
+        "Obesity range";
+
+      r=
+        `BMI: ${num(bmi)}<br>
+         Category: ${category}`;
+
+    }
+
+
+    /* BMR */
+
+    else if(id==="bmr" || id==="calories"){
+
+      const gender=val("gender");
+      const age=numberVal("age");
+      const weight=numberVal("weight");
+      const height=numberVal("height");
+
+      if(age<=0 || weight<=0 || height<=0)
+        return showError("Please enter valid details.");
+
+      let bmr=
+        10*weight+
+        6.25*height-
+        5*age+
+        (gender==="male"?5:-161);
+
+      if(id==="bmr"){
+
+        r=
+          `Estimated BMR: ${num(bmr)} calories/day`;
+
+      }else{
+
+        const activity=numberVal("activity");
+        const calories=bmr*activity;
+
+        r=
+          `Estimated BMR: ${num(bmr)} calories/day<br>
+           Estimated Daily Calories: ${num(calories)} calories/day`;
+
+      }
+
+    }
+
+
+    /* IDEAL WEIGHT */
+
+    else if(id==="ideal-weight"){
+
+      const height=numberVal("height");
+
+      if(height<=0)
+        return showError("Please enter valid height.");
+
+      const inches=height/2.54;
+
+      const base=60+2.3*(inches-60);
+
+      r=
+        `Estimated Ideal Weight: ${num(Math.max(40,base))} kg`;
+
+    }
+
+
+    /* WATER */
+
+    else if(id==="water"){
+
+      const weight=numberVal("weight");
+
+      if(weight<=0)
+        return showError("Please enter valid weight.");
+
+      const ml=weight*35;
+
+      r=
+        `Estimated Daily Water: ${num(ml/1000)} litres<br>
+         Approximate Amount: ${num(ml)} ml`;
+
+    }
+
+
+    /* BODY FAT */
+
+    else if(id==="body-fat"){
+
+      const gender=val("gender");
+      const height=numberVal("height");
+      const waist=numberVal("waist");
+      const neck=numberVal("neck");
+      const hip=numberVal("hip");
+
+      if(height<=0 || waist<=0 || neck<=0)
+        return showError("Please enter valid measurements.");
+
+      let bf;
+
+      if(gender==="male"){
+
+        bf=
+          495/
+          (1.0324-
+          0.19077*Math.log10(waist-neck)+
+          0.15456*Math.log10(height))
+          -450;
+
+      }else{
+
+        if(hip<=0)
+          return showError("Please enter hip measurement.");
+
+        bf=
+          495/
+          (1.29579-
+          0.35004*Math.log10(waist+hip-neck)+
+          0.22100*Math.log10(height))
+          -450;
+
+      }
+
+      r=
+        `Estimated Body Fat: ${num(Math.max(0,bf))}%`;
+
+    }
+
+
+    /* PREGNANCY */
+
+    else if(id==="pregnancy"){
+
+      const date=val("lmp");
+
+      if(!date)
+        return showError("Please select a date.");
+
+      const d=new Date(date+"T00:00:00");
+
+      d.setDate(d.getDate()+280);
+
+      r=
+        `Estimated Due Date: ${d.toLocaleDateString("en-IN",{
+          day:"numeric",
+          month:"long",
+          year:"numeric"
+        })}`;
+
+    }
+
+
+    /* MACROS */
+
+    else if(id==="macros"){
+
+      const calories=numberVal("calories");
+      const protein=numberVal("protein");
+      const fat=numberVal("fat");
+
+      if(calories<=0 || protein<0 || fat<0 || protein+fat>100)
+        return showError("Protein + fat percentages must be 100% or less.");
+
+      const carbs=100-protein-fat;
+
+      r=
+        `Protein: ${num(calories*protein/100/4)} g/day<br>
+         Carbohydrates: ${num(calories*carbs/100/4)} g/day<br>
+         Fat: ${num(calories*fat/100/9)} g/day`;
+
+    }
+
+
+    /* FUEL COST */
+
+    else if(id==="fuel-cost"){
+
+      const distance=numberVal("distance");
+      const mileage=numberVal("mileage");
+      const price=numberVal("price");
+
+      if(distance<=0 || mileage<=0 || price<0)
+        return showError("Please enter valid trip details.");
+
+      const litres=distance/mileage;
+      const cost=litres*price;
+
+      r=
+        `Fuel Required: ${num(litres)} litres<br>
+         Estimated Cost: ${money(cost)}`;
+
+    }
+
+
+    /* FUEL NEEDED */
+
+    else if(id==="fuel-needed"){
+
+      const distance=numberVal("distance");
+      const mileage=numberVal("mileage");
+
+      if(distance<=0 || mileage<=0)
+        return showError("Please enter valid values.");
+
+      r=
+        `Fuel Required: ${num(distance/mileage)} litres`;
+
+    }
+
+
+    /* MILEAGE */
+
+    else if(id==="mileage"){
+
+      const distance=numberVal("distance");
+      const fuel=numberVal("fuel");
+
+      if(distance<=0 || fuel<=0)
+        return showError("Please enter valid values.");
+
+      r=
+        `Vehicle Mileage: ${num(distance/fuel)} km/litre`;
+
+    }
+
+
+    /* EV */
+
+    else if(id==="ev-cost"){
+
+      const battery=numberVal("battery");
+      const charge=numberVal("charge");
+      const price=numberVal("price");
+
+      if(battery<=0 || charge<0 || price<0)
+        return showError("Please enter valid values.");
+
+      const units=battery*charge/100;
+      const cost=units*price;
+
+      r=
+        `Energy Used: ${num(units)} kWh<br>
+         Charging Cost: ${money(cost)}`;
+
+    }
+
+
+    /* FUEL SAVINGS */
+
+    else if(id==="fuel-savings"){
+
+      const distance=numberVal("distance");
+      const m1=numberVal("mileage1");
+      const m2=numberVal("mileage2");
+      const price=numberVal("price");
+
+      if(distance<=0 || m1<=0 || m2<=0 || price<0)
+        return showError("Please enter valid values.");
+
+      const cost1=distance/m1*price;
+      const cost2=distance/m2*price;
+
+      r=
+        `Vehicle A Cost: ${money(cost1)}<br>
+         Vehicle B Cost: ${money(cost2)}<br>
+         Monthly Saving: ${money(Math.abs(cost1-cost2))}`;
+
+    }
+
+
+    /* TRIP */
+
+    else if(id==="trip-cost"){
+
+      const distance=numberVal("distance");
+      const mileage=numberVal("mileage");
+      const fuel=numberVal("fuel");
+      const toll=numberVal("toll")||0;
+      const people=numberVal("people");
+
+      if(distance<=0 || mileage<=0 || fuel<0 || toll<0 || people<=0)
+        return showError("Please enter valid values.");
+
+      const fuelCost=distance/mileage*fuel;
+      const total=fuelCost+toll;
+
+      r=
+        `Fuel Cost: ${money(fuelCost)}<br>
+         Total Trip Cost: ${money(total)}<br>
+         Cost Per Person: ${money(total/people)}`;
+
+    }
+
+
+    /* PERCENTAGE */
+
+    else if(id==="percentage"){
+
+      const mode=val("mode");
+      const x=numberVal("x");
+      const y=numberVal("y");
+
+      if(!Number.isFinite(x)||!Number.isFinite(y))
+        return showError("Please enter valid numbers.");
+
+      if(mode==="of"){
+
+        r=`${num(x)}% of ${num(y)} = ${num(x*y/100)}`;
+
+      }else if(mode==="what"){
+
+        if(y===0)
+          return showError("Second value cannot be zero.");
+
+        r=`${num(x)} is ${num(x/y*100)}% of ${num(y)}`;
+
+      }else{
+
+        if(x===0)
+          return showError("Old value cannot be zero.");
+
+        const change=(y-x)/Math.abs(x)*100;
+
+        r=
+          change>0
+          ?`Percentage Increase: ${num(change)}%`
+          :change<0
+          ?`Percentage Decrease: ${num(Math.abs(change))}%`
+          :"No percentage change.";
+
+      }
+
+    }
+
+
+    /* DISCOUNT */
+
+    else if(id==="discount"){
+
+      const price=numberVal("price");
+      const rate=numberVal("rate");
+
+      if(price<0 || rate<0)
+        return showError("Please enter valid values.");
+
+      const discount=price*rate/100;
+
+      r=
+        `Discount: ${money(discount)}<br>
+         Final Price: ${money(price-discount)}<br>
+         You Save: ${money(discount)}`;
+
+    }
+
+
+    /* AGE */
+
+    else if(id==="age"){
+
+      const dobVal=val("dob");
+
+      if(!dobVal)
+        return showError("Please enter date of birth.");
+
+      const dob=new Date(dobVal+"T00:00:00");
+      const today=new Date();
+
+      if(dob>today)
+        return showError("Date of birth cannot be in the future.");
+
+      let years=today.getFullYear()-dob.getFullYear();
+      let months=today.getMonth()-dob.getMonth();
+      let days=today.getDate()-dob.getDate();
+
+      if(days<0){
+
+        months--;
+
+        const previous=
+          new Date(today.getFullYear(),today.getMonth(),0);
+
+        days+=previous.getDate();
+
+      }
+
+      if(months<0){
+
+        years--;
+        months+=12;
+
+      }
+
+      r=
+        `Age: ${years} years, ${months} months, ${days} days`;
+
+    }
+
+
+    /* DATE DIFFERENCE */
+
+    else if(id==="date-difference"){
+
+      const start=new Date(val("start")+"T00:00:00");
+      const end=new Date(val("end")+"T00:00:00");
+
+      if(isNaN(start)||isNaN(end))
+        return showError("Please select both dates.");
+
+      const days=Math.abs(
+        Math.round((end-start)/86400000)
+      );
+
+      r=
+        `Difference: ${num(days)} days`;
+
+    }
+
+
+    /* TIME */
+
+    else if(id==="time-duration"){
+
+      const start=val("start");
+      const end=val("end");
+
+      if(!start||!end)
+        return showError("Please enter both times.");
+
+      let a=start.split(":").map(Number);
+      let b=end.split(":").map(Number);
+
+      let minutes=
+        b[0]*60+b[1]-
+        (a[0]*60+a[1]);
+
+      if(minutes<0)
+        minutes+=1440;
+
+      const hours=Math.floor(minutes/60);
+      const mins=minutes%60;
+
+      r=
+        `Duration: ${hours} hours ${mins} minutes`;
+
+    }
+
+
+    /* TIP */
+
+    else if(id==="tip"){
+
+      const bill=numberVal("bill");
+      const rate=numberVal("rate");
+
+      if(bill<0||rate<0)
+        return showError("Please enter valid values.");
+
+      const tip=bill*rate/100;
+
+      r=
+        `Tip: ${money(tip)}<br>
+         Total Bill: ${money(bill+tip)}`;
+
+    }
+
+
+    /* BILL SPLIT */
+
+    else if(id==="bill-split"){
+
+      const bill=numberVal("bill");
+      const people=numberVal("people");
+
+      if(bill<0||people<=0)
+        return showError("Please enter valid values.");
+
+      r=
+        `Total Bill: ${money(bill)}<br>
+         Each Person: ${money(bill/people)}`;
+
+    }
+
+
+    /* AVERAGE */
+
+    else if(id==="average"){
+
+      const raw=val("numbers");
+
+      const arr=raw
+        .split(",")
+        .map(x=>parseFloat(x.trim()))
+        .filter(x=>Number.isFinite(x));
+
+      if(!arr.length)
+        return showError("Enter numbers separated by commas.");
+
+      const avg=
+        arr.reduce((a,b)=>a+b,0)/arr.length;
+
+      r=
+        `Numbers: ${arr.length}<br>
+         Average: ${num(avg)}`;
+
+    }
+
+
+    /* RATIO */
+
+    else if(id==="ratio"){
+
+      const a=numberVal("a");
+      const b=numberVal("b");
+
+      if(a<=0||b<=0)
+        return showError("Please enter positive numbers.");
+
+      function gcd(x,y){
+
+        while(y){
+          [x,y]=[y,x%y];
+        }
+
+        return x;
+
+      }
+
+      const g=gcd(Math.round(a),Math.round(b));
+
+      r=
+        `Simplified Ratio: ${a/g}:${b/g}`;
+
+    }
+
+
+    /* UNIT */
+
+    else if(id==="unit-converter"){
+
+      const type=val("type");
+      const value=numberVal("value");
+      const from=val("from");
+      const to=val("to");
+
+      if(!Number.isFinite(value))
+        return showError("Enter a valid value.");
+
+      let result;
+
+      if(type==="length"){
+
+        const base={
+          m:1,
+          km:1000,
+          mile:1609.344
+        };
+
+        if(!base[from]||!base[to])
+          return showError("For length use metre, kilometre or mile.");
+
+        result=value*base[from]/base[to];
+
+      }else if(type==="weight"){
+
+        const base={
+          kg:1,
+          lb:.45359237
+        };
+
+        if(!base[from]||!base[to])
+          return showError("For weight use kilogram or pound.");
+
+        result=value*base[from]/base[to];
+
+      }else{
+
+        if(from===to){
+          result=value;
+        }else if(from==="c"&&to==="f"){
+          result=value*9/5+32;
+        }else if(from==="f"&&to==="c"){
+          result=(value-32)*5/9;
+        }else{
+          return showError("For temperature use Celsius or Fahrenheit.");
+        }
+
+      }
+
+      r=
+        `Converted Value: ${num(result)}`;
+
+    }
+
+
+    /* FRACTION */
+
+    else if(id==="fraction-percent"){
+
+      const a=numberVal("numerator");
+      const b=numberVal("denominator");
+
+      if(!Number.isFinite(a)||!Number.isFinite(b)||b===0)
+        return showError("Enter a valid fraction.");
+
+      r=
+        `Percentage: ${num(a/b*100)}%`;
+
+    }
+
+
+    /* PACE */
+
+    else if(id==="pace"){
+
+      const distance=numberVal("distance");
+      const minutes=numberVal("minutes");
+
+      if(distance<=0||minutes<=0)
+        return showError("Please enter valid values.");
+
+      const pace=minutes/distance;
+
+      const pMin=Math.floor(pace);
+      const pSec=Math.round((pace-pMin)*60);
+
+      r=
+        `Pace: ${pMin}:${String(pSec).padStart(2,"0")} min/km`;
+
+    }
+
+
+    /* PROFIT MARGIN */
+
+    else if(id==="profit-margin"){
+
+      const sales=numberVal("sales");
+      const profit=numberVal("profit");
+
+      if(sales<=0)
+        return showError("Sales must be greater than zero.");
+
+      r=
+        `Profit Margin: ${num(profit/sales*100)}%`;
+
+    }
+
+
+    /* MARKUP */
+
+    else if(id==="markup"){
+
+      const cost=numberVal("cost");
+      const markup=numberVal("markup");
+
+      if(cost<0||markup<0)
+        return showError("Please enter valid values.");
+
+      const profit=cost*markup/100;
+
+      r=
+        `Markup Amount: ${money(profit)}<br>
+         Selling Price: ${money(cost+profit)}`;
+
+    }
+
+
+    /* ROI */
+
+    else if(id==="roi"){
+
+      const investment=numberVal("investment");
+      const finalValue=numberVal("return");
+
+      if(investment<=0)
+        return showError("Investment must be greater than zero.");
+
+      const profit=finalValue-investment;
+
+      r=
+        `Profit / Loss: ${money(profit)}<br>
+         ROI: ${num(profit/investment*100)}%`;
+
+    }
+
+
+    /* BREAK EVEN */
+
+    else if(id==="break-even"){
+
+      const fixed=numberVal("fixed");
+      const price=numberVal("price");
+      const variable=numberVal("variable");
+
+      const contribution=price-variable;
+
+      if(fixed<0||contribution<=0)
+        return showError("Selling price must be greater than variable cost.");
+
+      r=
+        `Break-Even Units: ${num(fixed/contribution)}<br>
+         Break-Even Sales: ${money(fixed/contribution*price)}`;
+
+    }
+
+
+    /* SALES TARGET */
+
+    else if(id==="sales-target"){
+
+      const target=numberVal("target");
+      const price=numberVal("price");
+
+      if(target<=0||price<=0)
+        return showError("Please enter valid values.");
+
+      r=
+        `Required Units: ${num(Math.ceil(target/price))}`;
+
+    }
+
+
+    /* COMMISSION */
+
+    else if(id==="commission"){
+
+      const sales=numberVal("sales");
+      const rate=numberVal("rate");
+
+      if(sales<0||rate<0)
+        return showError("Please enter valid values.");
+
+      const commission=sales*rate/100;
+
+      r=
+        `Commission: ${money(commission)}<br>
+         Total With Commission: ${money(sales+commission)}`;
+
+    }
+
+
+    /* PROFIT */
+
+    else if(id==="profit"){
+
+      const cost=numberVal("cost");
+      const selling=numberVal("selling");
+
+      if(cost<0||selling<0)
+        return showError("Please enter valid values.");
+
+      const profit=selling-cost;
+
+      r=
+        profit>=0
+        ?`Profit: ${money(profit)}<br>
+          Profit Percentage: ${num(profit/cost*100)}%`
+        :`Loss: ${money(Math.abs(profit))}`;
+
+    }
+
+
+    else{
+
+      r="Calculator is ready.";
+
+    }
+
+    document.getElementById("toolResult").innerHTML=r;
+
+  }catch(error){
+
+    showError("Please check your inputs and try again.");
+
+  }
+
 }
-function convertFactor(type,defs,val,from,to){let x=+$(val).value,a=$(from).value,b=$(to).value;setResult(`${num(x)} ${a} = <span class="big">${num(x*defs[a]/defs[b])}</span> ${b}`)}
-function resetActive(){document.querySelectorAll('#activeTool input').forEach(x=>x.value='');document.querySelectorAll('#activeTool select').forEach(x=>x.selectedIndex=0);$('result').textContent='Enter your details.'}
 
-$('evLocation')?.addEventListener('input',()=>{});
-renderCategories();renderCards();$('toolCount').textContent=tools.length;
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+function showError(message){
+
+  const result=document.getElementById("toolResult");
+
+  if(result)
+    result.innerHTML=message;
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+function resetCurrentTool(){
+
+  const tool=document.getElementById("activeTool");
+
+  if(!tool) return;
+
+  tool
+    .querySelectorAll("input")
+    .forEach(input=>{
+      input.value="";
+    });
+
+  tool
+    .querySelectorAll("select")
+    .forEach(select=>{
+      select.selectedIndex=0;
+    });
+
+  document.getElementById("toolResult").innerHTML=
+    "Enter your details.";
+
+}
+
 </script>
+
 </body>
 </html>
