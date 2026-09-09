@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ToolMitra - About, Contact, Privacy & Terms</title>
+
+<meta name="description"
+content="Learn about ToolMitra, contact us, read our privacy policy and review our terms and disclaimer.">
+
+<meta name="theme-color" content="#07111f">
+
+<link rel="icon" type="image/png" href="logo.png">
+
+
+<style>
+
+/* =========================================================
+   TOOLMITRA INFORMATION PAGE
+   ========================================================= */
+
+:root{
+
+  --navy:#07111f;
+  --navy2:#0c1b30;
+
+  --blue:#2563eb;
+  --blue2:#3b82f6;
+
+  --cyan:#06b6d4;
+
+  --text:#101828;
+  --muted:#667085;
+
+  --light:#f5f8fc;
+  --white:#ffffff;
+
+  --border:#e4e9f1;
+
+  --shadow:
+    0 12px 35px rgba(15,23,42,.08);
+
+  --radius:20px;
+
+}
+
+
+*{
+  box-sizing:border-box;
+}
+
+
+html{
+  scroll-behavior:smooth;
+}
+
+
+body{
+
+  margin:0;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background:var(--light);
+
+  color:var(--text);
+
+  line-height:1.7;
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header{
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(59,130,246,.20),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(6,182,212,.10),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      135deg,
+      #07111f,
+      #0b1a30 60%,
+      #0d2441
+    );
+
+  color:white;
+
+}
+
+
+header:after{
+
+  content:"";
+
+  position:absolute;
+
+  width:300px;
+
+  height:300px;
+
+  right:-130px;
+
+  top:-170px;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  border-radius:50%;
+
+  box-shadow:
+
+    0 0 0 35px rgba(255,255,255,.025),
+
+    0 0 0 70px rgba(255,255,255,.018);
+
+}
+
+
+.header-inner{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:1180px;
+
+  margin:auto;
+
+  padding:
+    22px 20px 24px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:16px;
+
+}
+
+
+.brand-logo{
+
+  width:64px;
+
+  height:64px;
+
+  object-fit:contain;
+
+  border-radius:17px;
+
+  background:white;
+
+  padding:5px;
+
+  box-shadow:
+
+    0 8px 25px rgba(0,0,0,.25),
+
+    0 0 0 1px rgba(255,255,255,.12);
+
+}
+
+
+.brand{
+
+  min-width:0;
+
+}
+
+
+.logo{
+
+  font-size:31px;
+
+  font-weight:850;
+
+  letter-spacing:-1.2px;
+
+  line-height:1;
+
+}
+
+
+.tagline{
+
+  margin-top:7px;
+
+  font-size:14px;
+
+  color:rgba(255,255,255,.70);
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav{
+
+  background:#0b1729;
+
+  border-top:
+    1px solid rgba(255,255,255,.06);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.06);
+
+}
+
+
+.nav-inner{
+
+  max-width:1180px;
+
+  margin:auto;
+
+  padding:
+    11px 20px;
+
+  display:flex;
+
+  gap:20px;
+
+  overflow-x:auto;
+
+}
+
+
+.nav a{
+
+  color:
+    rgba(255,255,255,.72);
+
+  text-decoration:none;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  white-space:nowrap;
+
+  transition:.18s;
+
+}
+
+
+.nav a:hover{
+
+  color:white;
+
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main{
+
+  max-width:900px;
+
+  margin:auto;
+
+  padding:
+    30px 20px 70px;
+
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro{
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:white;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:24px;
+
+  padding:38px;
+
+  margin-bottom:20px;
+
+  box-shadow:var(--shadow);
+
+}
+
+
+.intro:after{
+
+  content:"";
+
+  position:absolute;
+
+  width:220px;
+
+  height:220px;
+
+  right:-100px;
+
+  bottom:-120px;
+
+  border-radius:50%;
+
+  border:
+    1px solid rgba(37,99,235,.10);
+
+}
+
+
+.intro-content{
+
+  position:relative;
+
+  z-index:2;
+
+}
+
+
+.badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  padding:
+    7px 12px;
+
+  border-radius:999px;
+
+  background:#eff6ff;
+
+  color:#1d4ed8;
+
+  border:
+    1px solid #dbeafe;
+
+  font-size:12px;
+
+  font-weight:750;
+
+  margin-bottom:14px;
+
+}
+
+
+.intro h1{
+
+  margin:0;
+
+  font-size:
+    clamp(30px,5vw,43px);
+
+  line-height:1.1;
+
+  letter-spacing:-1.7px;
+
+}
+
+
+.intro h1 span{
+
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #0891b2
+    );
+
+  -webkit-background-clip:text;
+
+  background-clip:text;
+
+  color:transparent;
+
+}
+
+
+.intro p{
+
+  margin:
+    15px 0 0;
+
+  color:var(--muted);
+
+  font-size:16px;
+
+  max-width:700px;
+
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  margin-bottom:20px;
+
+  padding:
+    10px 14px;
+
+  border-radius:10px;
+
+  background:#eaf0f8;
+
+  color:#344054;
+
+  text-decoration:none;
+
+  font-size:13px;
+
+  font-weight:750;
+
+  transition:.18s;
+
+}
+
+
+.back:hover{
+
+  background:#dfe8f4;
+
+}
+
+
+/* =========================================================
+   INFORMATION SECTIONS
+   ========================================================= */
+
+.section{
+
+  background:white;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:20px;
+
+  padding:32px;
+
+  margin-bottom:20px;
+
+  box-shadow:
+    0 8px 25px rgba(15,23,42,.05);
+
+  scroll-margin-top:20px;
+
+}
+
+
+.section h2{
+
+  margin:
+    0 0 16px;
+
+  font-size:27px;
+
+  letter-spacing:-.8px;
+
+  color:#101828;
+
+}
+
+
+.section h3{
+
+  margin:
+    26px 0 8px;
+
+  font-size:18px;
+
+  color:#172033;
+
+}
+
+
+.section p{
+
+  margin:
+    8px 0 14px;
+
+  color:#475467;
+
+  font-size:15px;
+
+}
+
+
+.section ul{
+
+  margin:
+    10px 0 18px;
+
+  padding-left:23px;
+
+  color:#475467;
+
+}
+
+
+.section li{
+
+  margin-bottom:7px;
+
+}
+
+
+/* =========================================================
+   CONTACT BOX
+   ========================================================= */
+
+.contact-box{
+
+  margin-top:20px;
+
+  padding:20px;
+
+  border-radius:15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0f6ff,
+      #f7fbff
+    );
+
+  border:
+    1px solid #dce9fb;
+
+}
+
+
+.contact-box strong{
+
+  display:block;
+
+  color:#172033;
+
+  margin-bottom:4px;
+
+}
+
+
+.contact-box a{
+
+  color:#2563eb;
+
+  text-decoration:none;
+
+  font-weight:750;
+
+  word-break:break-word;
+
+}
+
+
+.contact-box a:hover{
+
+  text-decoration:underline;
+
+}
+
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.notice{
+
+  margin-top:18px;
+
+  padding:16px;
+
+  border-radius:12px;
+
+  background:#f8fafc;
+
+  border:
+    1px solid #e4e9f1;
+
+  color:#667085;
+
+  font-size:13px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+
+  background:#07111f;
+
+  color:white;
+
+  padding:
+    38px 20px;
+
+}
+
+
+.footer-inner{
+
+  max-width:1180px;
+
+  margin:auto;
+
+}
+
+
+.footer-brand{
+
+  max-width:500px;
+
+}
+
+
+.footer-brand h3{
+
+  margin:0;
+
+  font-size:21px;
+
+}
+
+
+.footer-brand p{
+
+  margin:
+    8px 0 20px;
+
+  color:
+    rgba(255,255,255,.55);
+
+  font-size:13px;
+
+  line-height:1.6;
+
+}
+
+
+.footer-links{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:18px;
+
+  padding:
+    18px 0;
+
+  border-top:
+    1px solid rgba(255,255,255,.09);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.09);
+
+}
+
+
+.footer-links a{
+
+  color:
+    rgba(255,255,255,.68);
+
+  text-decoration:none;
+
+  font-size:13px;
+
+  font-weight:650;
+
+}
+
+
+.footer-links a:hover{
+
+  color:white;
+
+}
+
+
+.footer-bottom{
+
+  padding-top:22px;
+
+  text-align:center;
+
+  color:
+    rgba(255,255,255,.40);
+
+  font-size:12px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:600px){
+
+  .header-inner{
+
+    padding:
+      18px 16px;
+
+  }
+
+
+  .brand-logo{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:14px;
+
+  }
+
+
+  .logo{
+
+    font-size:25px;
+
+  }
+
+
+  .tagline{
+
+    font-size:12px;
+
+  }
+
+
+  .nav-inner{
+
+    padding:
+      10px 15px;
+
+    gap:15px;
+
+  }
+
+
+  main{
+
+    padding:
+      20px 15px 50px;
+
+  }
+
+
+  .intro{
+
+    padding:
+      28px 21px;
+
+    border-radius:21px;
+
+  }
+
+
+  .intro h1{
+
+    font-size:33px;
+
+  }
+
+
+  .intro p{
+
+    font-size:15px;
+
+  }
+
+
+  .section{
+
+    padding:
+      24px 19px;
+
+    border-radius:19px;
+
+  }
+
+
+  .section h2{
+
+    font-size:24px;
+
+  }
+
+
+  .section h3{
+
+    font-size:17px;
+
+  }
+
+
+  .section p{
+
+    font-size:14px;
+
+  }
+
+
+  .footer-links{
+
+    gap:14px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     HEADER
+     ======================================================= -->
+
+<header>
+
+  <div class="header-inner">
+
+
+    <img
+      src="logo.png"
+      alt="ToolMitra Logo"
+      class="brand-logo">
+
+
+    <div class="brand">
+
+      <div class="logo">
+        ToolMitra
+      </div>
+
+      <div class="tagline">
+        Free useful calculators and tools for India
+      </div>
+
+    </div>
+
+
+  </div>
+
+</header>
+
+
+<!-- =======================================================
+     NAVIGATION
+     ======================================================= -->
+
+<div class="nav">
+
+  <div class="nav-inner">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="#about">
+      About ToolMitra
+    </a>
+
+    <a href="#contact">
+      Contact Us
+    </a>
+
+    <a href="#privacy">
+      Privacy Policy
+    </a>
+
+    <a href="#terms">
+      Terms & Disclaimer
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- =======================================================
+     MAIN
+     ======================================================= -->
+
+<main>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="intro-content">
+
+      <div class="badge">
+        ✦ ToolMitra Information
+      </div>
+
+      <h1>
+        About <span>ToolMitra</span>
+      </h1>
+
+      <p>
+        Learn more about ToolMitra, contact us,
+        understand how information is handled,
+        and review the terms that apply when
+        using our website.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- BACK -->
+
+  <a
+    href="index.html"
+    class="back">
+
+    ← Back to ToolMitra
+
+  </a>
+
+
+  <!-- =====================================================
+       ABOUT
+       ===================================================== -->
+
+  <section
+    class="section"
+    id="about">
+
+    <h2>
+      About ToolMitra
+    </h2>
+
+
+    <p>
+      ToolMitra is a free online platform that provides
+      simple calculators and useful tools for everyday
+      needs.
+    </p>
+
+
+    <p>
+      Our goal is to make common calculations easier,
+      faster and easier to understand without requiring
+      users to create an account.
+    </p>
+
+
+    <h3>
+      What ToolMitra provides
+    </h3>
+
+
+    <ul>
+
+      <li>
+        Financial and investment calculators
+      </li>
+
+      <li>
+        Loan and EMI related calculators
+      </li>
+
+      <li>
+        Tax and GST related calculators
+      </li>
+
+      <li>
+        Health and personal calculators
+      </li>
+
+      <li>
+        Vehicle and fuel calculators
+      </li>
+
+      <li>
+        Everyday calculation tools
+      </li>
+
+    </ul>
+
+
+    <h3>
+      Our approach
+    </h3>
+
+
+    <p>
+      ToolMitra is designed with simplicity and usability
+      in mind. Our tools are intended to provide quick,
+      understandable results for common calculations.
+    </p>
+
+
+    <p>
+      Many calculations can be performed directly in
+      your browser without requiring an account or
+      registration.
+    </p>
+
+
+    <p>
+      Calculator results are intended for general
+      informational purposes and should not be considered
+      professional financial, tax, medical or legal advice.
+    </p>
+
+
+  </section>
+
+
+  <!-- =====================================================
+       CONTACT
+       ===================================================== -->
+
+  <section
+    class="section"
+    id="contact">
+
+    <h2>
+      Contact Us
+    </h2>
+
+
+    <p>
+      We welcome questions, suggestions, feedback and
+      reports about possible errors or problems with
+      ToolMitra.
+    </p>
+
+
+    <p>
+      If you have a question about one of our tools,
+      notice an incorrect result, or have a suggestion
+      that could improve the website, please contact us.
+    </p>
+
+
+    <div class="contact-box">
+
+      <strong>
+        ToolMitra Email
+      </strong>
+
+
+      <a
+        href="mailto:vivekkodalil@gmail.com">
+
+        vivekkodalil@gmail.com
+
+      </a>
+
+
+    </div>
+
+
+    <div class="notice">
+
+      Please include enough information about your
+      question or issue so that we can understand
+      and respond to your enquiry.
+
+    </div>
+
+
+  </section>
+
+
+  <!-- =====================================================
+       PRIVACY POLICY
+       ===================================================== -->
+
+  <section
+    class="section"
+    id="privacy">
+
+    <h2>
+      Privacy Policy
+    </h2>
+
+
+    <p>
+      This Privacy Policy explains how ToolMitra
+      handles information when you visit and use
+      our website.
+    </p>
+
+
+    <h3>
+      Information we collect
+    </h3>
+
+
+    <p>
+      ToolMitra does not require users to create an
+      account or provide personal information simply
+      to use the calculators available on the website.
+    </p>
+
+
+    <p>
+      Information entered into calculators may be
+      processed in your browser to produce the
+      requested calculation.
+    </p>
+
+
+    <h3>
+      Calculator information
+    </h3>
+
+
+    <p>
+      ToolMitra's calculators are designed primarily
+      for calculations performed by the user. We do
+      not intentionally request sensitive personal
+      information through the calculator tools.
+    </p>
+
+
+    <h3>
+      Cookies
+    </h3>
+
+
+    <p>
+      ToolMitra may use cookies or similar technologies
+      where necessary for website functionality,
+      analytics or advertising services.
+    </p>
+
+
+    <h3>
+      Advertising
+    </h3>
+
+
+    <p>
+      ToolMitra may display advertisements through
+      third-party advertising services.
+    </p>
+
+
+    <p>
+      If Google AdSense or another advertising provider
+      is used on the website, that provider may use
+      cookies, identifiers or similar technologies
+      according to its own policies.
+    </p>
+
+
+    <h3>
+      Analytics
+    </h3>
+
+
+    <p>
+      ToolMitra may use analytics services to understand
+      general website usage, such as which pages or
+      tools are visited and how users interact with
+      the website.
+    </p>
+
+
+    <p>
+      Analytics providers may collect technical and
+      usage information according to their respective
+      privacy policies.
+    </p>
+
+
+    <h3>
+      Third-party websites
+    </h3>
+
+
+    <p>
+      ToolMitra may contain links to external websites.
+      We are not responsible for the privacy practices,
+      content or security of third-party websites.
+    </p>
+
+
+    <h3>
+      Children's privacy
+    </h3>
+
+
+    <p>
+      ToolMitra is a general-purpose website and does
+      not intentionally request personal information
+      from children.
+    </p>
+
+
+    <h3>
+      Changes to this Privacy Policy
+    </h3>
+
+
+    <p>
+      We may update this Privacy Policy from time to
+      time to reflect changes to the website, services
+      or applicable requirements.
+    </p>
+
+
+  </section>
+
+
+  <!-- =====================================================
+       TERMS & DISCLAIMER
+       ===================================================== -->
+
+  <section
+    class="section"
+    id="terms">
+
+    <h2>
+      Terms & Disclaimer
+    </h2>
+
+
+    <h3>
+      General use
+    </h3>
+
+
+    <p>
+      ToolMitra provides calculators and useful online
+      tools for general informational and educational
+      purposes.
+    </p>
+
+
+    <p>
+      By using ToolMitra, you agree to use the website
+      responsibly and for lawful purposes.
+    </p>
+
+
+    <h3>
+      Calculator results
+    </h3>
+
+
+    <p>
+      We make reasonable efforts to provide useful
+      calculations. However, ToolMitra does not
+      guarantee that every calculation or result will
+      always be completely accurate, current or suitable
+      for a particular situation.
+    </p>
+
+
+    <p>
+      Users should independently verify important
+      information before making decisions based on
+      calculator results.
+    </p>
+
+
+    <h3>
+      Financial disclaimer
+    </h3>
+
+
+    <p>
+      Financial, loan, EMI, investment, SIP, salary,
+      tax and related calculators provide estimates
+      based on the information entered by the user.
+    </p>
+
+
+    <p>
+      These results should not be treated as financial,
+      investment, tax or professional advice.
+    </p>
+
+
+    <p>
+      Actual results may vary depending on applicable
+      rules, rates, fees, lender policies, investment
+      performance and individual circumstances.
+    </p>
+
+
+    <h3>
+      Health disclaimer
+    </h3>
+
+
+    <p>
+      Health-related calculators are provided for
+      general informational purposes only.
+    </p>
+
+
+    <p>
+      They are not intended to diagnose, treat or
+      prevent any medical condition and should not
+      replace advice from a qualified healthcare
+      professional.
+    </p>
+
+
+    <h3>
+      External links
+    </h3>
+
+
+    <p>
+      ToolMitra may contain links to third-party
+      websites or services.
+    </p>
+
+
+    <p>
+      We do not control and are not responsible for
+      the content, availability, security or privacy
+      practices of external websites.
+    </p>
+
+
+    <h3>
+      Limitation of liability
+    </h3>
+
+
+    <p>
+      To the extent permitted by applicable law,
+      ToolMitra shall not be responsible for losses
+      or damages arising from reliance on calculator
+      results or information provided through the
+      website.
+    </p>
+
+
+    <h3>
+      Changes to these terms
+    </h3>
+
+
+    <p>
+      These Terms & Disclaimer may be updated when
+      necessary to reflect changes to ToolMitra,
+      its services or applicable requirements.
+    </p>
+
+
+  </section>
+
+
+</main>
+
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+
+    <div class="footer-brand">
+
+      <h3>
+        ToolMitra
+      </h3>
+
+
+      <p>
+        Free useful calculators and tools designed
+        for everyday needs in India.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+
+      <a href="index.html">
+        Home
+      </a>
+
+
+      <a href="info.html#about">
+        About ToolMitra
+      </a>
+
+
+      <a href="info.html#contact">
+        Contact Us
+      </a>
+
+
+      <a href="info.html#privacy">
+        Privacy Policy
+      </a>
+
+
+      <a href="info.html#terms">
+        Terms & Disclaimer
+      </a>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      ToolMitra © 2026 ·
+      Free calculators and useful tools for India
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
