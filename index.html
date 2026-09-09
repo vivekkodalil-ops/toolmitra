@@ -3529,6 +3529,577 @@ function resetCurrentTool(){
 }
 
 </script>
+<!-- =========================================================
+     TOOLMITRA MONETIZATION / TRUST PAGES
+     ========================================================= -->
+
+<style>
+/* ---------- Legal / Info Pages ---------- */
+
+.info-page{
+  display:none;
+  max-width:900px;
+  margin:35px auto 70px;
+  padding:0 20px;
+}
+
+.info-page.active{
+  display:block;
+}
+
+.info-card{
+  background:#fff;
+  border:1px solid #e4e9f1;
+  border-radius:24px;
+  padding:35px;
+  box-shadow:0 12px 35px rgba(15,23,42,.07);
+}
+
+.info-card h1{
+  margin:0 0 10px;
+  font-size:34px;
+  line-height:1.2;
+  letter-spacing:-1px;
+  color:#101828;
+}
+
+.info-card h2{
+  margin:30px 0 10px;
+  font-size:21px;
+  color:#172033;
+}
+
+.info-card p,
+.info-card li{
+  color:#667085;
+  font-size:15px;
+  line-height:1.75;
+}
+
+.info-card ul{
+  padding-left:22px;
+}
+
+.info-back{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  border:0;
+  background:#f4f7fb;
+  color:#475467;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  margin-bottom:20px;
+}
+
+.info-back:hover{
+  background:#eaf0f8;
+}
+
+.info-date{
+  color:#98a2b3;
+  font-size:13px;
+  margin-bottom:25px;
+}
+
+.contact-box{
+  margin-top:20px;
+  padding:20px;
+  border-radius:15px;
+  background:#f5f8fc;
+  border:1px solid #e4e9f1;
+}
+
+.contact-box strong{
+  color:#172033;
+}
+
+.contact-box a{
+  color:#2563eb;
+  text-decoration:none;
+  font-weight:700;
+}
+
+@media(max-width:600px){
+
+  .info-page{
+    padding:0 15px;
+    margin-top:20px;
+  }
+
+  .info-card{
+    padding:24px 19px;
+    border-radius:20px;
+  }
+
+  .info-card h1{
+    font-size:28px;
+  }
+
+  .info-card h2{
+    font-size:19px;
+  }
+
+}
+</style>
+
+
+<!-- =========================================================
+     ABOUT PAGE
+     ========================================================= -->
+
+<section
+  class="info-page"
+  id="aboutPage">
+
+  <div class="info-card">
+
+    <button
+      class="info-back"
+      onclick="closeInfoPage()">
+      ← Back to ToolMitra
+    </button>
+
+    <h1>About ToolMitra</h1>
+
+    <div class="info-date">
+      Last updated: September 2026
+    </div>
+
+    <p>
+      Welcome to ToolMitra — a collection of simple,
+      practical online tools designed for everyday needs in India.
+    </p>
+
+    <p>
+      ToolMitra brings useful calculators and decision-support
+      tools together in one place so that users can quickly
+      calculate, compare and understand everyday numbers.
+    </p>
+
+    <h2>What we provide</h2>
+
+    <p>
+      ToolMitra includes tools covering areas such as finance,
+      tax, health, vehicles and everyday calculations.
+    </p>
+
+    <p>
+      Our goal is to keep these tools simple, fast and easy
+      to understand, especially on mobile devices.
+    </p>
+
+    <h2>Free to use</h2>
+
+    <p>
+      ToolMitra is designed to provide useful tools without
+      requiring users to create an account or sign up.
+    </p>
+
+    <h2>Our approach</h2>
+
+    <p>
+      We aim to continuously improve the accuracy, usability
+      and usefulness of ToolMitra's tools and information.
+    </p>
+
+    <p>
+      ToolMitra is an independent website and is not a bank,
+      insurance company, government department, hospital or
+      other financial or professional institution.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRIVACY PAGE
+     ========================================================= -->
+
+<section
+  class="info-page"
+  id="privacyPage">
+
+  <div class="info-card">
+
+    <button
+      class="info-back"
+      onclick="closeInfoPage()">
+      ← Back to ToolMitra
+    </button>
+
+    <h1>Privacy Policy</h1>
+
+    <div class="info-date">
+      Last updated: September 2026
+    </div>
+
+    <p>
+      Your privacy is important to us. This Privacy Policy
+      explains how ToolMitra handles information when you use
+      our website.
+    </p>
+
+    <h2>Information we collect</h2>
+
+    <p>
+      Most ToolMitra calculators work directly in your browser.
+      The information entered into a calculator is generally used
+      to perform the requested calculation.
+    </p>
+
+    <p>
+      ToolMitra does not require users to create an account
+      simply to use the calculators.
+    </p>
+
+    <h2>Cookies</h2>
+
+    <p>
+      ToolMitra may use cookies or similar technologies for
+      website functionality, analytics and advertising.
+    </p>
+
+    <p>
+      Third-party advertising providers, including Google,
+      may use cookies to display advertisements based on a
+      user's visits to this and other websites.
+    </p>
+
+    <h2>Google AdSense</h2>
+
+    <p>
+      If advertising is enabled on ToolMitra, third-party
+      vendors, including Google, may use cookies to serve
+      advertisements based on a user's prior visits to this
+      website or other websites.
+    </p>
+
+    <p>
+      Users may be able to manage advertising preferences
+      through Google's advertising settings and other
+      available browser controls.
+    </p>
+
+    <h2>Third-party links</h2>
+
+    <p>
+      ToolMitra may eventually contain links to third-party
+      websites or services. We are not responsible for the
+      privacy practices or content of those external websites.
+    </p>
+
+    <h2>Changes to this policy</h2>
+
+    <p>
+      We may update this Privacy Policy when our website,
+      services or legal requirements change. The updated
+      version will be published on this page.
+    </p>
+
+    <h2>Contact</h2>
+
+    <p>
+      If you have questions about this Privacy Policy,
+      please contact us through the Contact page.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     DISCLAIMER PAGE
+     ========================================================= -->
+
+<section
+  class="info-page"
+  id="disclaimerPage">
+
+  <div class="info-card">
+
+    <button
+      class="info-back"
+      onclick="closeInfoPage()">
+      ← Back to ToolMitra
+    </button>
+
+    <h1>Disclaimer</h1>
+
+    <div class="info-date">
+      Last updated: September 2026
+    </div>
+
+    <h2>General information</h2>
+
+    <p>
+      The information and calculations provided by ToolMitra
+      are intended for general informational and educational
+      purposes only.
+    </p>
+
+    <p>
+      While we aim to provide useful and accurate calculations,
+      ToolMitra does not guarantee that every result will be
+      completely accurate or suitable for every individual
+      situation.
+    </p>
+
+    <h2>Financial calculations</h2>
+
+    <p>
+      Financial calculators such as EMI, SIP, loan eligibility,
+      salary and other finance-related tools provide estimates.
+    </p>
+
+    <p>
+      Actual results may vary depending on banks, financial
+      institutions, interest rates, taxes, fees, eligibility
+      criteria, investment performance and other factors.
+    </p>
+
+    <p>
+      ToolMitra does not provide personalized financial,
+      investment, insurance or legal advice.
+    </p>
+
+    <h2>Health calculations</h2>
+
+    <p>
+      Health-related tools are provided for general information
+      and should not be considered medical diagnosis or treatment.
+    </p>
+
+    <p>
+      Users should consult an appropriately qualified healthcare
+      professional for medical advice.
+    </p>
+
+    <h2>Vehicle and other calculations</h2>
+
+    <p>
+      Vehicle, fuel, tax, percentage and other calculators are
+      estimates based on the values entered by the user.
+    </p>
+
+    <h2>No guarantee</h2>
+
+    <p>
+      ToolMitra does not guarantee that calculator results,
+      estimates or information will apply to a particular
+      individual, transaction or decision.
+    </p>
+
+    <p>
+      Users are responsible for independently verifying
+      important information before making financial, medical,
+      legal or other significant decisions.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT PAGE
+     ========================================================= -->
+
+<section
+  class="info-page"
+  id="contactPage">
+
+  <div class="info-card">
+
+    <button
+      class="info-back"
+      onclick="closeInfoPage()">
+      ← Back to ToolMitra
+    </button>
+
+    <h1>Contact ToolMitra</h1>
+
+    <div class="info-date">
+      We'd love to hear from you.
+    </div>
+
+    <p>
+      If you have found an error, have a suggestion, or want
+      to report a problem with one of our tools, please contact
+      the ToolMitra team.
+    </p>
+
+    <div class="contact-box">
+
+      <strong>Email</strong>
+
+      <p>
+        <a href="mailto:contact@toolmitra.in">
+          contact@toolmitra.in
+        </a>
+      </p>
+
+      <p class="small">
+        Please replace this email address with your actual
+        ToolMitra email address before publishing.
+      </p>
+
+    </div>
+
+    <h2>What you can contact us about</h2>
+
+    <ul>
+      <li>Calculator errors or incorrect results</li>
+      <li>Suggestions for new tools</li>
+      <li>Website problems</li>
+      <li>Privacy-related questions</li>
+      <li>General feedback</li>
+      <li>Business or partnership enquiries</li>
+    </ul>
+
+  </div>
+
+</section>
+
+
+<script>
+/* =========================================================
+   TOOLMITRA INFO PAGE SYSTEM
+   ========================================================= */
+
+function openInfoPage(page){
+
+  /* Hide main website home */
+  const home=document.getElementById('home');
+
+  if(home){
+    home.style.display='none';
+  }
+
+  /* Hide calculator views */
+  document
+    .querySelectorAll('.tool')
+    .forEach(function(tool){
+      tool.classList.remove('active');
+    });
+
+  /* Hide all information pages */
+  document
+    .querySelectorAll('.info-page')
+    .forEach(function(pageElement){
+      pageElement.classList.remove('active');
+    });
+
+  /* Open requested page */
+  const target=document.getElementById(page+'Page');
+
+  if(target){
+    target.classList.add('active');
+  }
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+
+}
+
+
+function closeInfoPage(){
+
+  document
+    .querySelectorAll('.info-page')
+    .forEach(function(page){
+      page.classList.remove('active');
+    });
+
+  const home=document.getElementById('home');
+
+  if(home){
+    home.style.display='block';
+  }
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+
+}
+
+
+/* =========================================================
+   UPDATE FOOTER LINKS
+   ========================================================= */
+
+document.addEventListener('DOMContentLoaded',function(){
+
+  const footerLinks=
+    document.querySelectorAll('.footer-links a');
+
+  footerLinks.forEach(function(link){
+
+    const text=
+      link.textContent
+        .trim()
+        .toLowerCase();
+
+    if(text==='about'){
+
+      link.removeAttribute('href');
+
+      link.style.cursor='pointer';
+
+      link.onclick=function(){
+        openInfoPage('about');
+      };
+
+    }
+
+    if(text==='privacy'){
+
+      link.removeAttribute('href');
+
+      link.style.cursor='pointer';
+
+      link.onclick=function(){
+        openInfoPage('privacy');
+      };
+
+    }
+
+    if(text==='disclaimer'){
+
+      link.removeAttribute('href');
+
+      link.style.cursor='pointer';
+
+      link.onclick=function(){
+        openInfoPage('disclaimer');
+      };
+
+    }
+
+    if(text==='contact'){
+
+      link.removeAttribute('href');
+
+      link.style.cursor='pointer';
+
+      link.onclick=function(){
+        openInfoPage('contact');
+      };
+
+    }
+
+  });
+
+});
+</script>
 
 </body>
 </html>
