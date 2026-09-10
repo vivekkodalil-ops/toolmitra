@@ -5245,6 +5245,62 @@ document.getElementById("toolResult").innerHTML=
 
 }
 
+
+/* =========================================================
+   EV CHARGING STATION FINDER
+   Opens Google Maps and searches for EV charging stations.
+   No API key is required.
+   ========================================================= */
+function findEVChargingStations(){
+
+  if(!navigator.geolocation){
+    window.open(
+      "https://www.google.com/maps/search/EV+charging+station",
+      "_blank"
+    );
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    function(position){
+
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+
+      const mapsUrl =
+        "https://www.google.com/maps/search/EV+charging+station/@" +
+        lat + "," + lon + ",14z";
+
+      window.open(mapsUrl, "_blank");
+
+    },
+    function(){
+
+      window.open(
+        "https://www.google.com/maps/search/EV+charging+station",
+        "_blank"
+      );
+
+    },
+    {
+      enableHighAccuracy:false,
+      timeout:10000,
+      maximumAge:300000
+    }
+  );
+
+}
+
 </script>
+
+<div class="tool-card" id="ev-charging-station-finder">
+  <div class="tool-icon">🔌</div>
+  <div class="tool-content">
+    <h3>EV Charging Station Finder</h3>
+    <p>Find EV charging stations near your location using Google Maps.</p>
+    <button class="tool-button" type="button"
+      onclick="findEVChargingStations()">Find Charging Stations</button>
+  </div>
+</div>
 </body>
 </html>
